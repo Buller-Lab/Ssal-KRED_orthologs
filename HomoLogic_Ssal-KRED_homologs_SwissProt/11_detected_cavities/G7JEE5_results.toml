@@ -1,0 +1,47 @@
+# pyKVFinder results
+
+[FILES]
+INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/08_homolog_bindingsites_superposed/G7JEE5_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/11_detected_cavities/G7JEE5_cavities.pdb"
+
+[PARAMETERS]
+STEP = 0.6
+
+[RESULTS.VOLUME]
+KAA = 246.24
+
+[RESULTS.AREA]
+KAA = 180.93
+
+[RESULTS.MAX_DEPTH]
+KAA = 3.39
+
+[RESULTS.AVG_DEPTH]
+KAA = 0.97
+
+[RESULTS.AVG_HYDROPATHY]
+KAA = -0.44
+EisenbergWeiss = [ -1.42, 2.6,]
+
+[RESULTS.RESIDUES]
+KAA = [ [ "25", "A", "PHE",], [ "26", "A", "ILE",], [ "27", "A", "ALA",], [ "92", "A", "THR",], [ "93", "A", "ALA",], [ "94", "A", "SER",], [ "96", "A", "VAL",], [ "129", "A", "THR",], [ "131", "A", "SER",], [ "165", "A", "TYR",], [ "169", "A", "LYS",], [ "192", "A", "PRO",], [ "195", "A", "VAL",], [ "205", "A", "ASN",], [ "207", "A", "SER",],]
+
+[RESULTS.FREQUENCY.KAA.RESIDUES]
+ALA = 2
+ASN = 1
+ILE = 1
+LYS = 1
+PHE = 1
+PRO = 1
+SER = 3
+THR = 2
+TYR = 1
+VAL = 2
+
+[RESULTS.FREQUENCY.KAA.CLASS]
+R1 = 6
+R2 = 2
+R3 = 6
+R4 = 0
+R5 = 1
+RX = 0
