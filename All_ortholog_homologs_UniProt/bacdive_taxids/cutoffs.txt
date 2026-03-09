@@ -1,0 +1,5 @@
+halophilic: <= 5
+thermophilic: >= 45
+psychrophilic: <= 15
+acidophilic: <= 5
+alkaliphilic: >= 9

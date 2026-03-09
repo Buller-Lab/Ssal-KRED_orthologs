@@ -21,7 +21,6 @@ hl.superpose_structures(input_folder='04_structure_models', output_folder='06_su
 # Based on given distance from reference ligand, extract binding sites from reference structure
 hl.extract_reference_binding_site(distance_cutoff=6.0)
 
-
 # Based on given distance from reference ligand, extract binding sites from superposed homolog structures
 hl.extract_homolog_binding_sites(distance_cutoff=6.0, input_folder='06_superposed_structures', output_folder='07_homolog_bindingsites')
 

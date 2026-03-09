@@ -1,0 +1,378 @@
+ID,designation_header,strain_number_header,is_type_strain_header,species,pH
+164491,HSLZ-75,"JCM 33270, CICC 6269",1,"Acetilactobacillus jinshanensis",3-5
+,,,,,4
+11,,"DSM 11825, LTH 2458, CIP 105762",1,"Acetobacter pomorum",2.5
+168915,,"LMG 30378, CCUG 71558",1,"Achromobacter veterisilvae",4.0-5.0
+166226,G45-3,"CGMCC 1.16069, KCTC 62275",1,"Acidibrevibacterium fodinaquatile",2.5-5
+,,,,,4
+133383,SK-11,"DSM 100508, NBRC 111227",1,"Acidicapsa acidisoli",5
+142,KA1,"DSM 23886, LMG 25897, VKM B-2678",1,"Acidicapsa borealis",3.5
+159709,4GSKX,"CGMCC 1.15449, LMG 29213",1,"Acidicapsa dinghuensis",4.5-5
+143,WH120,"DSM 25248, LMG 26244, NCCB 100371, VKM B-2677",1,"Acidicapsa ligni",3.5
+,,,,,4.0-4.5
+6149,V6,"DSM 14174, JCM 32253",1,"Acidihalobacter aeolianus",1.5-3
+,,,,,1.8
+24820,V8,"DSM 14175, JCM 32254",1,"Acidihalobacter ferrooxydans",1-3
+,,,,,1.8
+106,ICP,"DSM 10331, NBRC 103882, JCM 15462",1,"Acidimicrobium ferrooxidans",2.0
+158421,JS278,"DSM 106790, VTT E-113202",1,"Acidipropionibacterium virtanenii",4
+,,,,,4.5
+67,HS-AP3,"DSM 16009, JCM 10600",1,"Acidisphaera rubrifaciens",4.5-5.0
+160797,MG,"DSM 107098, JCM 33084",1,"Acidithiobacillus ferrianus",2
+130138,11Fe,"DSM 29468, ATCC 33020, JCM 18981",1,"Acidithiobacillus ferridurans",2.1
+132357,M20,"DSM 100412, JCM 30830",1,"Acidithiobacillus ferriphilus",2
+159192,CJ-2,"DSM 105150, KCTC 4683",1,"Acidithiobacillus sulfuriphilus",3
+131,161,"DSM 11244, ATCC 51196, JCM 7670, NCIMB 13165, BCRC 80197, IFO 15755, NBRC 15755",1,"Acidobacterium capsulatum",3
+133532,"AL46, VTCC-D9-1","NBRC 104303, DSM 108313, VTCC D9-1",1,"Acidocella aluminiidurans",4.5
+158255,Ok2G,"DSM 104037, NBRC 112502",1,"Acidocella aquatica",4.5
+144,,"DSM 20639, ATCC 33144, CCUG 19206, CIP 105361, LMG 18291, Soltys 50052",1,"Actinobaculum suis",<5.0
+16914,N3-7,"DSM 45040, JCM 13278, NRRL B-24429, BCRC 16845, CIP 109251, NBRC 106142, NCIMB 14302",1,"Actinocorallia cavernae",4.1
+17634,GE134766,"DSM 44926, NRRL B-24431, JCM 14896, BCRC 16838, NBRC 102107",1,"Actinospica acidiphila",5
+1766,T6,"DSM 22365, LMG 21773, NCIMB 13939, JCM 15959",1,"Aeriscardovia aeriphila",4.2-4.5
+280,868E,"DSM 19111, CECT 7113, LMG 23376, CIP 109539",1,"Aeromonas bivalvium",4.5
+283,717,"DSM 23621, CECT 7401, LMG 24681, CIP 110205",1,"Aeromonas fluvialis",4.5
+262,"848T, 848","DSM 17090, CECT 5864, LMG 22214, CCUG 50741, CIP 108676",1,"Aeromonas molluscorum",4.5
+273,"138, AS20/1/1","DSM 21293, ATCC 49393, CCM 4103, CECT 5179, CIP 104757, NCIMB 13210",1,"Aeromonas salmonicida subsp. smithia",4
+,,,,,5
+286,A2-67,"DSM 24094, CECT 7402, LMG 24682, CIP 110203",1,"Aeromonas sanarellii",4.5
+285,A2-50,"DSM 24096, CECT 7403, LMG 24683, CIP 110204",1,"Aeromonas taiwanensis",4.5
+164664,54-2,"JCM 33824, CCM 8896, KCTC 21120, LMG 31058, NCIMB 15154",1,"Agrilactobacillus yilanensis",5
+167490,XY-J91,"MCCC 1K03612, KCTC 72216",1,"Algoriphagus kandeliae",5
+414,TA-67,"DSM 14558, IAM 14935, NRIC 0496, JCM 21417, CIP 107723, NBRC 100859, NRIC 6496",1,"Alicyclobacillus acidiphilus",3.0
+133505,ZJ-6,"CGMCC 1.7072, NBRC 104953",1,"Alicyclobacillus aeris",3.5
+429,3-A191,"DSM 17975, IAM 15224, JCM 21678, NBRC 103102",1,"Alicyclobacillus contaminans",4-4.5
+,,,,,4.25
+430,S-TAB,"DSM 17978, IAM 15229, JCM 21683, NBRC 103109",1,"Alicyclobacillus fastidiosus",4.0-4.5
+,,,,,4.25
+435,TC-34,"DSM 22381, CGMCC 1.6357, JCM 15090",1,"Alicyclobacillus ferrooxydans",3
+431,5-A83J,"DSM 17979, IAM 15227, JCM 21681, NBRC 103104",1,"Alicyclobacillus kakegawensis",4.0-4.5
+,,,,,4.25
+432,5A-239-2O-A,"DSM 17980, IAM 15370, JCM 21814",1,"Alicyclobacillus macrosporangiidus",4.0-4.5
+,,,,,4.25
+158721,USBA-GBX-503,"CMPUJ UGB U503, CBMAI 1927",1,"Alicyclobacillus montanus",1.5-4.5
+,,,,,3-4
+428,RB-718,"DSM 17974, IAM 15230, JCM 21684, NBRC 103105",1,"Alicyclobacillus sacchari",4.0-4.5
+,,,,,4.25
+433,4A-336,"DSM 17981, IAM 15226, JCM 21680, NBRC 103103",1,"Alicyclobacillus shizuokensis",4.0-4.5
+,,,,,4.25
+425,CsHg2,"DSM 16176",1,"Alicyclobacillus vulcanalis",4
+166218,MYP11,"KCTC 62899 NBRC 113544",1,"Aliishimia ponticola",5
+133618,KYW147,"KCTC 22735, JCM 16339, UCCCB31",1,"Alteraurantiacibacter aestuarii",5.0
+140988,BR-75,"CECT 9129, LMG 29518, BR 75, UCCCB41",1,"Altericroceibacterium endophyticum",5.0
+140987,CPA5,"CECT 9130, LMG 29519, UCCCB42",1,"Alteriqipengyuania halimionae",5.0
+140995,JDTF-113,"KCTC 52655, NBRC 112708",1,"Alteromonas aestuariivivens",5
+166423,M8JJ-5,"KCTC 49089, CGMCC 1.16390",1,"Amnibacterium flavum",5
+159864,AU-G6,"CGMCC 4.7351, NBRC 112404",1,"Amycolatopsis antarctica",5
+158267,SCM_MK2-4,"DSM 107509, JCM 32134, TBRC 7186",1,"Amycolatopsis oliviviridis",4.3
+166210,SHSM-M15,"KACC 19862, NBRC 113749",1,"Ancylomarina salipaludis",5
+158412,HV_12,"DSM 104128, NRRL B-65472, JCM 33325",1,"Apilactobacillus timberlakei",5
+166153,DS48-3,"KCTC 52068, CCTCC AB 2018061",1,"Aquisediminimonas profunda",5
+166152,CH68-4,"KCTC 62205, CCTCC AB 2018062",1,"Aquisediminimonas sediminicola",5
+24776,"A22/HD/4H, A22_HD_4H","DSM 26555, LMG 27985",1,"Aridibacter famidurans",4
+24777,Ac_23_E3,"DSM 26558, LMG 27597",1,"Aridibacter kavangonensis",3.5
+133653,AA08,"BCC 12978, TISTR 1524, NBRC 100057, NRIC 0535, JCM 16128, CIP 109097, LMG 23083",1,"Asaia krungthepensis",3.0-3.5
+,,,,,3.25
+34,S60-1,"DSM 15972, CCM 7132, IFO (now NBRC) 16457, JCM 10715, KCTC 12914, MTCC 4042, NRIC 0323, IFO 16457, NBRC 16457, CIP 107278",1,"Asaia siamensis",3
+,,,,,3.5
+534,CW5,"DSM 21987, JCM 14755, KCTC 12893",1,"Aureimonas frigidaquae",5.0
+139618,PP-WC-4G-234,"DSM 29985, CIP 110892, LMG 28655",1,"Aureimonas galii",5
+132997,PP-CE-2G-454,"DSM 102238, CCM 8665, LMG 29411, CIP 111015",1,"Aureimonas pseudogalii",5
+533,5715S-12,"DSM 18598, CIP 109815, KACC 11607",1,"Aureimonas ureilytica",4.0
+1263,41KF2b,"DSM 21631, JCM 13350, MTCC 7306, BCRC 17879",1,"Bacillus altitudinis",5
+1280,m4-4,"DSM 25608, CECT 7197, NRRL B-41737",1,"Bacillus coahuilensis",4.5
+158883,KGMB02408,"DSM 107828, KCTC 15687, JCM 34008",1,"Bacteroides faecalis",5
+39,,"DSM 23312, CGMCC 1.10758, CPCC 100156",1,"Belnapia rosea",5
+1739,BluCI/TP,"DSM 19703, ATCC BAA-1567, KCTC 15159",1,"Bifidobacterium bombi",>4.5
+1726,Ru915B,"DSM 6492, ATCC 49391, CCUG 34976, JCM 8219, CGMCC 1.2273, KCTC 3369, KCTC 3423, LMG 11341",1,"Bifidobacterium merycicum",4.5
+1738,T16,"DSM 22366, LMG 21775, NCIMB 13940, JCM 15958",1,"Bifidobacterium psychraerophilum",4.0-4.5
+1723,Ru687,"DSM 6489, ATCC 49390, CCUG 34975, JCM 8222, CGMCC 1.2241, KCTC 3425, LMG 12588, LMG 21811",1,"Bifidobacterium ruminantium",4.5
+158654,RA3-3-1,"KCTC 62140, NBRC 113024",1,"Bizionia berychis",5
+23454,"A2-16, A2_16","DSM 25172, LMG 26944",1,"Blastocatella fastidiosa",4
+140974,T2,"KCTC 42354, JCM 30467, DSM 112298",1,"Blastomonas fulva",5
+132661,KWS-1,"DSM 28796, JCM 30059, MTCC 11836",1,"Brachybacterium aquaticum",5
+159799,M1HQ-2,"KCTC 49087, CGMCC 1.16391, JCM 33403",1,"Brachybacterium endophyticum",4
+140478,U675,"LMG 30031, BR 6010, CNPSo 1165, SEMIA 6399",1,"Bradyrhizobium mercantei",4.5
+1884,SCII24,"DSM 13340, NBRC 102585, CCUG 47104, LMG 18957, UCCCB44",1,"Brucella tritici",3.0
+141,,"DSM 22489, LMG 25276, SN 10",1,"Bryocella elongata",3.2
+2090,IC-154,"DSM 15908, ANMR 0165, JCM 11604, MCC-UPLB 1331",1,"Caldisphaera lagunensis",3.5-4.0
+2140,150B,"CIP 110020, DSM 23162, CCUG 56289, LMG 24588",1,"Campylobacter cuniculorum",4
+17637,Aac-30,"DSM 44948, JCM 16000, NBRC 101179",1,"Catenulispora rubra",5
+5683,PSD1-4,"DSM 17072, KCTC 12382, NBRC 100864, CCUG 52904, CIP 109194",1,"Chryseobacterium soldanellicola",5
+5669,PHA3-4,"CCUG 52900, DSM 17071, KCTC 12381, NBRC 100863, CIP 109195",1,"Chryseobacterium taeanense",5
+17843,T49,"DSM 23976, ICMP 18418",1,"Chthonomonas calidirosea",4.5
+164372,JN500901,"JCM 32827, CICC 24501",1,"Clostridium fermenticellae",5
+133372,ZGM211,"CICC 24070, BCRC 80950",1,"Clostridium guangxiense",5
+2626,"McClung 2300, 5","DSM 525, ATCC 6013, IMG 1584b, NCIMB 9486, VKM B-1774, CCUG 31328, JCM 1408, BCRC 10942, CECT 377, KCTC 1674, LMG 3285, LMG 5709, NCFB 1845",1,"Clostridium pasteurianum",4.7
+166230,OISW-25,"KCTC 62426, NBRC 113187",1,"Colwellia ponticola",5
+140622,YSM-23,"KCTC 52213, NBRC 111994",1,"Colwellia sediminilitoris",5
+158653,SB30-Chr27-3,"CIP 111491, CCM 8815, DSM 106034",1,"Comamonas aquatilis",4.5
+164661,184-8,"JCM 33821, CCM 8895, KCTC 21131, LMG 31050, NCIMB 15152",1,"Companilactobacillus baiquanensis",5
+164662,116-2,"JCM 33822, CCM 8899, KCTC 21124, LMG 31051, NCIMB 15158",1,"Companilactobacillus kedongensis",5
+164665,33-7,"JCM 33825, CCM 8936, KCTC 21118, LMG 31166, NCIMB 15153",1,"Companilactobacillus keshanensis",5
+164660,256-3,"JCM 33820, CCM 8901, LMG 31048, NCIMB 15160",1,"Companilactobacillus mishanensis",5
+164658,M1575,"JCM 33818, CCM 8892, LMG 31045, NCIMB 15149",1,"Companilactobacillus zhongbaensis",5
+133399,26D10-3-4,"CFCC 12725, KCTC 33575",1,"Corticicoccus populi",5
+166514,GM-16,"KACC 19611, KCTC 62423, NBRC 113192",1,"Croceicoccus ponticola",5
+141129,S5,"JCM 30642, VKM B-2941",1,"Cuniculiplasma divulgatum",0.5-4.0
+,,,,,1.0-1.2
+7324,B55,"DSM 21577, JCM 14609, NBRC 101786, VTCC D6-11, CIP 109639",1,"Curtobacterium ammoniigenes",4
+12636,,"LMG 16711, DSM 1897, ATCC 6919, CCUG 1794, JCM 6425, KCTC 3314, NCTC 737, BCRC 10723, CECT 5684, CGMCC 1.5003, CIP 53.117, KCTC 5008, LMG 3591, NBRC 107605, NRRL B-4224, VKM Ac-1450, VPI 0389",1,"Cutibacterium acnes subsp. acnes",4.5-5.0
+133242,,"ATCC 11828, JCM 6473, CCUG 6369, BCRC 16146, KCTC 3320, VPI 0391",1,"Cutibacterium acnes subsp. defendens",4.5-5.0
+17717,,"DSM 745, ATCC 25205",1,"Cyclobacterium marinum",4
+1904,K107,"DSM 21779, CCUG 54520, KCTC 12981",1,"Daeguia caeni",4.5
+3855,AG-3a,"DSM 11300, CIP 105573",1,"Deinococcus geothermalis",4.0
+3858,ALT-1b,"DSM 11303, CCUG 50777, CIP 105574",1,"Deinococcus murrayi",5.0
+133269,KSY3-6,"KCTC 33787, JCM 31313",1,"Deinococcus persicinus",5
+133136,GHD-1,"KCTC 52260, NBRC 112299",1,"Demequina litorisediminis",4.5
+,,,,,5
+158353,3408-1,"DSM 105356, VKM B-3183",1,"Desulfothermobacter acidiphilus",4.5
+133163,HJR-2,"KCTC 52211, NBRC 112271",1,"Devosia confluentis",5
+166465,"4 G-K06","LMG 30268, GDMCC 1.1188",1,"Dyella monticola",4.5
+166464,4MSK11,"KCTC 62280, GDMCC 1.1185",1,"Dyella psychrodurans",5
+133,Wbg-1,"DSM 19364, ATCC BAA-1497",1,"Edaphobacter aggregans",4.5
+132350,DHF9,"DSM 29920, CGMCC 1.12997",1,"Edaphobacter dinghuensis",4
+132,Jbg-1,"DSM 18101, ATCC BAA-1329",1,"Edaphobacter modestus",4.5
+166207,MRS2,"KCTC 62904, NBRC 113550",1,"Empedobacter tilapiae",4.5
+,,,,,5
+166242,63-4,"NCIMB 15178, CCM 8922",1,"Enterococcus dongliensis",5
+166241,190-7,"NCIMB 15200, CCM 8949",1,"Enterococcus hulanensis",5
+166240,94-2,"NCIMB 15180, CCM 8920, LMG 31180",1,"Enterococcus nangangensis",5
+164673,241-2-2,"JCM 33833, CCM 8921, LMG 31181, NCIMB 15185",1,"Enterococcus pingfangensis",5
+164674,85-4,"JCM 33834, CCM 8923, LMG 31183, NCIMB 15179",1,"Enterococcus songbeiensis",5
+17689,YUAN-3,"DSM 18485, CGMCC 1.5033, JCM 12961",1,"Ethanoligenens harbinense",4.5-5
+108,T23,"DSM 19497, ATCC BAA-1647, DSM 11138",1,"Ferrimicrobium acidiphilum",1.4
+,,,,,2.0
+109,Y005,"DSM 19514, ATCC BAA-1645",1,"Ferrithrix thermotolerans",1.6
+,,,,,1.8
+140564,R-10-9,"JCM 31673, KACC 18997, KEMB 9005-447",1,"Flavobacterium olei",4-4.5
+158690,YSM-43,"KACC 19435, KCTC 62142, NBRC 113020",1,"Flavobacterium sediminilitoris",5
+158536,HibF3,"LMG 29831, JCM 31735",1,"Floricoccus penangensis",3
+,,,,,5
+158537,DF1,"LMG 29833, JCM 31733",1,"Floricoccus tropicus",3
+,,,,,5
+6864,D-24,"DSM 19113, CCUG 49949, CIP 108761, LAB 1679, LMG 22556, JCM 17831, BCRC 81233, CECT 7089, NRIC 0663",1,"Fructobacillus durionis",3.9
+141065,TM-6,"KCTC 42720, CECT 9024",1,"Fulvivirga lutimaris",5
+1757,594,"DSM 4944, ATCC 14018, CCUG 3717, NCTC 10915, NCTC 10287, LMG 7832, JCM 11026, BCRC 17040, CIP 70.74, KCTC 5096, LMG 14323",1,"Gardnerella vaginalis",4.5
+13657,DCA-1,"DSM 21823, CGMCC 1.7745",1,"Gemmobacter caeni",5
+1419,"R-35646, 26","DSM 22, ATCC 12980, CCM 2062, CCUG 26241, IAM 11062, LMG 6939, NBRC 12550, NCIMB 8923, NCTC 10339, VKM B-2231, IFO 12550, NCA 26, JCM 2501, BCRC 11092, CIP 66.23, KCTC 1665, KCTC 1752, NCFB 1768, NRRL B-1172, VKM B-510, VTT E-81128, UCCCB118, NCDO 1768",1,"Geobacillus stearothermophilus",5
+,,,,,5.0
+1422,"R-35648, 178","DSM 730, BGSC 93, IFO 15316, LMG 19007, NBRC 15316, VKM B-1259",1,"Geobacillus thermocatenulatus",5.0
+1433,"LEH-1, R-35636","DSM 5366, ATCC 43513, VKM B-2230",1,"Geobacillus thermoleovorans",5.0
+133296,12-2,"DSM 102813, KCTC 52141, NBRC 111987",1,"Gilvimarinus japonicus",5
+141066,GHTF-27,"KCTC 52208, NBRC 111992",1,"Christiangramia sediminilitoris",5
+138,TPB6028,"DSM 22516, LMG 25274, VKM B-2571",1,"Granulicella aggregans",4.5
+22898,MP5ACTX2,"DSM 23128, ATCC BAA-1858",1,"Granulicella arctica",5
+22899,MP5ACTX8,"DSM 23137, ATCC BAA-1857",1,"Granulicella mallensis",5
+139,OB1010,"DSM 22464, LMG 25275",1,"Granulicella paludicola",4.2
+137,TPB6011,"DSM 21001, VKM B-2509",1,"Granulicella pectinivorans",3.8-4.5
+136,"T4, TPO-1014","DSM 18704, ATCC BAA-1396, TPO 1014",1,"Granulicella rosea",4.5
+22900,S6CTX5A,"DSM 23136, LMG 26174",1,"Granulicella sapmiensis",4.5
+158483,AF10,"DSM 104461, VKM B-3276",1,"Granulicella sibirica",4.5-5
+22901,MP5ACTX9,"DSM 23138, ATCC BAA-1859",1,"Granulicella tundricola",5
+5977,MH1-52-1,"DSM 22442, CECT 7534, JCM 16109",1,"Halarchaeum acidiphilum",4.4-4.5
+132987,A1336,"DSM 100333, CCOS 902, CCUG 67421, KCTC 15694",1,"Prevotella colorans",5
+1351,"HSL-3, SL-3","DSM 18897, CIP 108052, JCM 11546, KCCM 41590, CGMCC 1.3705, KCTC 3842",1,"Halobacillus salinus",4.5
+11364,"P6-12, Strain P6-12","DSM 17154, CCUG 48869, CECT 5661, LMG 21710, UCCCB3, CIP 108242",1,"Herbaspirillum lusitanum",5.0
+4188,EP5-r,"DSM 24586, OCM 986",1,"Hippea alviniae",4.75
+4187,Mar08-272r,"DSM 24585, OCM 985",1,"Hippea jasoniae",3.5-5
+,,,,,4.75
+11923,JB-A1,"DSM 12350, ATCC 700877",1,"Hydrogenovibrio kuenenii",4
+133120,16F3P,"KCTC 52194, JCM 31653",1,"Hymenobacter aquaticus",5
+166087,WPCB131,"UCCCB13, IMSNU 14116, KCTC 12533, NBRC 101118",1,"Hymenobacter rigui",5.0
+133364,16F7G,"KCTC 52197, JCM 31655",1,"Hymenobacter seoulensis",4
+,,,,,5
+133277,C-3,"JCM 17843, LMG 28660",1,"Iodidimonas muriae",4
+158617,JSSK-16,"KACC 19436, KCTC 62137, NBRC 113018",1,"Jannaschia confluentis",4.5
+,,,,,5
+166538,M5W7-7,"KCTC 49195, CGMCC 1.13744",1,"Kocuria soli",5
+159749,WE7,"CGMCC 1.15338, JCM 31140",1,"Komagataeibacter cocois",2.5
+58,YO-3,"DSM 14400, IFO 16664, JCM 11301, NBRC 16664, NRIC 0488, CCUG 48823, CCM 7137, NCIMB 14242",1,"Kozakia baliensis",3
+166299,,"DSM 29426, NRRL B-65062, YM 53",1,"Kribbella capetownensis",4.3
+132535,,"DSM 23717, NRRL B-24813, PIP 158",1,"Kribbella pittospori",5
+158437,EA-1,"DSM 106492, CCOS 1194",1,"Kyrpidia spormannii",<4.5
+24140,7-19,"KCTC 21025, DSM 28401, CCUG 62990, LMG 27191, NCIMB 14832, JCM 30918, CIP 110708",1,"Lacticaseibacillus songhuajiangensis",4
+24139,11050,"DSM 28402, CCUG 62991, LMG 27194, KCTC 21026, CIP 110706",1,"Lactiplantibacillus mudanjiangensis",4
+141151,"WiKim29, WiKim39","KCTC 21077, JCM 31938",1,"Companilactobacillus allii",3.5-4.0
+159711,BS-W1,"BCRC 80970, NBRC 112377",1,"Levilactobacillus bambusae",3
+166234,54-5,"NCIMB 15151, CCM 8894",1,"Lapidilactobacillus bayanensis",5
+133853,S1L19,"JCM 18524, CCTCC M 2011381",1,"Lentilactobacillus curieae",4
+24135,"CHCC13979, ZN7a-9","DSM 26046, LMG 27067, JCM 30917, KCTC 21031",1,"Lactobacillus delbrueckii subsp. jakobsenii",4
+166202,395-6.2,"CCM 8927, NCIMB 15188, LMG 31179",1,"Companilactobacillus huachuanensis",5
+166523,ZW163,"NCIMB 15193, CCM 8926, CCTCC AB 2019015",1,"Lacticaseibacillus hulanensis",5
+134061,11102,"LMG 27192, NCIMB 14833, JCM 30919, CIP 110707",1,"Paucilactobacillus nenjiangensis",4
+166328,R7,"BCRC 81127, NBRC 113530",1,"Companilactobacillus suantsaicola",3
+166329,R19,"BCRC 81129, NBRC 113532",1,"Levilactobacillus suantsaiihabitans",3
+134042,516,"NBRC 109475, BCRC 80576, JCM 31966, LMG 29105",1,"Lactococcus formosensis",5
+158748,159469,"LMG 30040, DSM 104842, CIP 111606",1,"Lactococcus petauri",3
+133905,0905C15,"NBRC 109049, BCRC 80460, JCM 32014",1,"Lactococcus taiwanensis",5
+158433,NtB2,"DSM 107259, JCM 32569",1,"Lactococcus termiticola",5
+1212,MB800,"DSM 15595, LMG 17892, CIP 108417",1,"Lederbergia galactosidilytica",<5
+158809,PFL01,"KCCM 43247, JCM 31901",1,"Lelliottia jeotgali",4
+1362,PS11-2,"DSM 19123, CIP 109343, JCM 12149, PCU 240, TISTR 1549, NCIMB 14363",1,"Lentibacillus halophilus",5.0
+1359,SF-20,"DSM 16425, CIP 107807, JCM 11462, KCCM 41560, ATCC BAA-719, CGMCC 1.3447, CGMCC 1.6154",1,"Lentibacillus salicampi",5.0
+7391,S27,"DSM 20621, CCM 8762, JCM 32600",1,"Leucobacter weissii",5
+6839,,"DSM 21478, CCUG 54536, LMG 23990, JCM 16942, NCIMB 14555",1,"Leuconostoc holzapfelii",3.9
+6695,1.1424,"DSM 22467, JCM 18045, LMG 25291, TMW 1.1424",1,"Levilactobacillus paucivorans",4
+133002,HDW-36,"DSM 105137, CECT 8901, KCTC 42719",1,"Lewinella aquimaris",5
+14046,II-2,"DSM 23179, ATCC 23123, NBRC 102661, NCIMB 12855",1,"Lewinella cohaerens",5
+166128,RmlP026,"KCTC 72077, VKM B-3277",1,"Lichenibacterium minus",4.5-5
+6678,,"DSM 18793, JCM 14505, NRIC 0697, CIP 109834",1,"Limosilactobacillus equigenerosi",4
+6657,L489,"DSM 18630, CCUG 53453, CIP 109616, JCM 15611",1,"Liquorilactobacillus ghanensis",3.9
+158631,,"CCM 8709, CIP 111178, LMG 29765, MaA MAA42",1,"Litorimonas haliclonae",4
+133224,YSM-17,"KCTC 52249, NBRC 112330",1,"Litorisediminivivens gilvus",5
+1538,10a,"DSM 17140, ATCC BAA-1146, IAM 15262, JCM 21713, CIP 109652, NBRC 103108",1,"Lysinibacillus boronitolerans",5.0
+158538,M11-4,"MCCC 1K03312, JCM 32104",1,"Mangrovitalea sediminis",5
+483,SW-156,"DSM 16072, JCM 12324, KCTC 12184, CIP 108614",1,"Marinobacter daepoensis",5.0
+481,SW145,"DSM 16070, JCM 12323, CGMCC 1.8487, KCTC 12185, CIP 108615",1,"Marinobacter flavimaris",5.0
+531,MACL11,"DSM 17316, CECT 5861, LMG 22193, CIP 108716",1,"Martelella mediterranea",5.0
+141155,PTW21,"BCRC 81061, CICC 24113",1,"Massilia neuiana",5
+158578,KBB12,"KCTC 32230, JCM 18740",1,"Melaminivora jejuensis",<5
+1250,YKJ-10,"DSM 18226, CIP 107104, JCM 10885, KCCM 41040, BCRC 20126, CCM 7133, CGMCC 1.3651, KCTC 3839",1,"Mesobacillus jeotgali",<5.0
+158821,S1-3-7,"WYCCWR 10195, HAMBI 3692, LMG 30254",1,"Mesorhizobium wenxiniae",4-5
+1659,T4,"DSM 15673, NCIMB 13949",1,"Methylocella tundrae",4.2
+1673,BW863,"DSM 19998, NCIMB 14408",1,"Methylovirgula ligni",4.5-5.0
+133183,JF-6,"MTCC 11843, JCM 30060, KCTC 39828",1,"Microbacterium aureliae",5
+140576,GHTF-23,"NBRC 112533, KCTC 52569",1,"Microbulbifer aestuariivivens",4
+,,,,,4.5
+132342,S3Af-1,"DSM 100019, CGMCC 4.7306, JCM 31774",1,"Microlunatus endophyticus",4
+7974,MK-41,"DSM 43819, ATCC 21773, JCM 6239, NRRL B-16095, CECT 3294, IMSNU 22025, MTCC 330, NBRC 101909, NCIMB 12751",1,"Micromonospora inositola",3.5
+7977,"MK-70 (FERM-P 1560)","DSM 43868, ATCC 21819, FERM P-1560, IFO 14304, IMET 8310, JCM 7348, NBRC 14304, CECT 3296, HUT 6590, IMSNU 20086, KACC 20103, KCTC 1052, NCIMB 12659, NRRL 8178, VKM Ac-1317",1,"Micromonospora olivasterospora",3.5
+7976,,"DSM 43821, ATCC 27007, CBS 326.71, IFO 13324, IMET 8213, IMRU 3343, JCM 3156, NBRC 13324, NRRL B-16094, CECT 3297, IFM 1279, KCTC 9369, MTCC 331, NCIMB 12661, NRRL B-2101, VKM Ac-937",1,"Micromonospora purpureochromogenes",3.5
+133326,V5/3M,"LMG 29787, RCAM 02728",1,"Microvirga ossetica",5
+156203,DR-f4,"CCUG 60717, KCTC 23359, JCM 16601, KACC 14556, KACC {14556, UCCCB33",1,"Mucilaginibacter dorajii",5.0
+140568,PP-F2F-G47,"CCM 8711, CIP 111182, LMG 29767, DSM 103633",1,"Mucilaginibacter galii",5
+133144,PP-F2F-G21,"DSM 100995, CCM 8625, CIP 110921, LMG 29118",1,"Mucilaginibacter phyllosphaerae",<5.0
+158311,,"CECT 9646, DSM 107316, NCTC 11659",1,"Mycobacterium kyogaense",5
+168508,N5BH11,"CGMCC 4.7524, KCTC 49196",1,"Nakamurella flava",4
+1251,B1801T,"DSM 18237, LMG 17489, NCIMB 13771, Rcp Sm1, JCM 21708, CIP 106910, IAM 15257, KCTC 13885, KCTC 3851, LMG 19448, NBRC 102428",1,"Neobacillus fumarioli",4.0-5.0
+1216,"IDA 3307, R-15439","DSM 15603, CIP 108805, LMG 21837, JCM 21709, IAM 15258, NBRC 102450",1,"Neobacillus novalis",4.0-5.0
+1217,"IDA 0086, R-16300, ISA0086","DSM 15604, CIP 108804, LMG 21838, JCM 21710, IAM 15259, KCTC 13572, NBRC 102451",1,"Neobacillus soli",4.0-5.0
+1215,"IDA 3632, R-15447","DSM 15602, CIP 108806, LMG 21834, JCM 21711, IAM 15260, KCTC 13573, NBRC 102452",1,"Neobacillus vireti",4.0-5.0
+10669,"GA 919 (N 164), M 258","DSM 43665, ATCC 3318, DSM 43257, DSM 43578, IMRU 3318, NCIB 12058, NCTC 11134, JCM 3088, BCRC 13380, BCRC 13722, CBS 318.60, CCUG 10109, CCUG 27778, CCUG 48656, CECT 3053, CECT 4069, CGMCC 4.1166, CGMCC 4.1829, CIP 104775, IFM 0028, IFM 0284, IFO 15532, IMET 7377, IMSNU 21224, KCTC 9958, NBRC 15532, NCIMB 12058, NRRL B-2089, PCM 2173",1,"Nocardia farcinica",5
+10679,,"DSM 43242, ATCC 14629, NCTC 1934, CCUG 10075, JCM 3377, CBS 262.39, CCM 2779, CGMCC 4.1168, CIP 104514, IFM 0239, IFO 14405, IID 5214, IMSNU 21221, JCM 3393, KCTC 9960, NBRC 14405, NCIMB 12084, VKM Ac-869",1,"Nocardia otitidiscaviarum",5
+10717,"3426, 16, strain 16","DSM 43405, ATCC 6865, DSM 43582, IFO 15921, IMRU 3426, NBRC 15921, NCTC 2392, CCUG 45937, CIP 104841, JCM 9099, CCM 2776, CCUG 4.1169, IFM 0333, IMET 7500, NRRL B-16037, VKM Ac-867",1,"Nocardia transvalensis",5
+133101,ST01-07,"BCC 45622, NBRC 109069",1,"Nocardia xestospongiae",5
+133918,,"KCTC 33035, CCUG 62987, CAU 1051",1,"Oceanobacillus chungangensis",5
+133090,"DB 13031","DSM 28013, CGMCC 1.12770",1,"Paenibacillus silvae",5
+166455,3-5-3,"CGMCC 1.13686, KCTC 33998",1,"Paenibacillus zeisoli",4
+133562,SA41,"NBRC 101817",1,"Paraburkholderia heleia",5
+133350,,"DSM 101189, LMG 29163, STM 7183",1,"Paraburkholderia piptadeniae",4
+,,,,,5
+1961,"MTI-641, MTl-641","DSM 17197, ATCC BAA-744, CIP 107921, LMG 22722",1,"Paraburkholderia unamae",2.8
+140807,GHD-30,"KCTC 52214, NBRC 111993",1,"Paracoccus aestuariivivens",4.5
+,,,,,5
+158707,LB2,"KCTC 62138, NBRC 113023",1,"Paracoccus alimentarius",4.5
+,,,,,5
+158752,GHD-05,"KCTC 52978, NBRC 112902",1,"Paracoccus litorisediminis",5.0
+1438,"M1, R-35644","DSM 9572, LMG 23032",1,"Parageobacillus thermantarcticus",5.0
+1430,"KP 1006, R-35637, NRS-81","DSM 2542, ATCC 43742, NCIB 11955, CCUG 28887, NRRL B-14233, CIP 106930, NRRL B-14516, NCIMB 11955",1,"Geobacillus thermoglucosidasius",5.0
+139573,NSCS20N07D,"CIP 111031, KCTC 52126, MCCC 1A01886",1,"Paraphotobacterium marinum",5
+166215,KKH3,"LMG 26003, KCTC 23131",1,"Pectobacterium actinidiae",5
+166139,,"LMG 21371, NCPPB 4609, CFBP 6617",1,"Pectobacterium brasiliense",5
+166216,,"NCPPB 3387, ICMP 9168, CFBP 6051",1,"Pectobacterium versatile",5
+133113,,"LMG 29684, CCM 8689",1,"Pedobacter jamesrossensis",5
+6858,215,"DSM 19935, LMG 24286",1,"Periweissella ghanensis",3.9
+360,K110,"DSM 23373, JCM 14330, KCTC 12838, CCUG 56486",1,"Pigmentiphaga daeguensis",4.5
+159685,IMT-318,"DSM 107179, CCM 8859, CIP 111626, LMG 30658",1,"Pigmentiphaga humi",5
+24217,HSS8-18,"DSM 46738, BCC 41917, JCM 17129, NBRC 112720",1,"Planosporangium thailandense",5
+133261,RA4-7,"KCTC 52418, NBRC 112383",1,"Polaribacter haliotis",5
+141043,OITF-22,"KCTC 52658, NBRC 112706",1,"Polaribacter insulae",5
+133147,YKTF-7,"KCTC 52252, NBRC 112298",1,"Pontibacter litorisediminis",5
+133191,KYW1030,"KACC 18739, JCM 31319",1,"Pontibacter rugosus",4
+130974,"HM 533","DSM 45485, CECT 8709, UTMC 00533, UTMC 533",1,"Promicromonospora kermanensis",4
+140699,OCN003,"CCOS 1042, CIP 111189",1,"Pseudoalteromonas piratica",5
+158791,MM-14,"KACC 19434, KCTC 62139, NBRC 113019",1,"Hanstruepera ponticola",5.0
+133214,E3/2,"LMG 29678, CCM 8698, DSM 103461, CIP 111103",1,"Duganella danionis",5
+12800,,"DSM 50071, ATCC 10145, ICPB 2523, NCIB 8295, NCTC 10332, NRRL B-771, WDCM 00024, JCM 5962, BCRC 10944, CCEB 481, CCM 1960, CCUG 28447, CCUG 551, CECT 110, CGMCC 1.1785, CIP 100720, IAM 1514, IFO 12689, IFO 3756, KCTC 1750, LMG 1242, NBRC 12689, NBRC 3756, NCDO 1369, NCIMB 8295, NCPPB 1965, IMET 10403, CCM 481, VKM B588, CIP 63.52",1,"Pseudomonas aeruginosa",5
+166254,A31/70,"CECT 9981, CCUG 73638",1,"Stutzerimonas nosocomialis",5
+140347,ATK03,"DSM 104088, CECT 9183",1,"Pseudonocardia nigra",5
+133680,HDW-19,"KCTC 23043, CCUG 58879",1,"Pseudorhodobacter aquimaris",5.0
+140481,HWR-46,"NBRC 112426, KCTC 52470",1,"Pseudorhodobacter ponti",5
+140472,M1A1,"CIP 111183, CCM 8710, LMG 29766",1,"Psychromonas aquatilis",5
+141170,4GSH07,"CGMCC 1.15448, LMG 29214",1,"Puia dinghuensis",4
+14408,UG-2,"DSM 19429, LMG 24205",1,"Pullulanibacillus uraniitolerans",4
+132610,Su06,"DSM 28599, ATCC BAA-2559",1,"Pyrodictium delaneyi",5
+141093,FH13,"CCBAU 101094, HAMBI 3626, LMG 28672",1,"Rhizobium acidisoli",4.5
+132154,LBP2-1,"DSM 104289, ATCC BAA-2435, CIP 110456, CCGE 524",1,"Rhizobium calliandrae",4.5-5
+141049,"Z87-8, U 10001","UMR 1320, LMG 30030, CNPSo 668",1,"Rhizobium esperanzae",4
+133217,LPU83,"CECT 9014, LMG 29160",1,"Rhizobium favelukesii",4.5
+170906,"JKLM 12A2","MCC 3961, KACC 21380, JCM 33658",1,"Rhizobium indicum",4
+132155,"SJP1-2, NSJP1-1","DSM 104288, ATCC BAA-2446, CIP 110454, CCGE 526",1,"Rhizobium mayense",4.5-5
+7573,B-1973,"DSM 7307, ATCC 19584, CECT 908, LMG 16473, NCIMB 9729, NRRL B-1973, JCM 11566, BCRC 14858, CIP 82.105, IAM 14871, KCTC 3388, LMG 17310, MTCC 22, NCFB 2326, PCM 2469, NCDO 2326",1,"Rhizobium viscosum",5
+140545,CRZM18R,"LMG 29735, CECT 9169",1,"Rhizobium zeae",5
+76,5420S-30,"DSM 19363, KACC 12521, UCCCB24, CIP 110193",1,"Muricoccus aerilatus",5.0
+133325,GHTF-24,"KCTC 52454, NBRC 112420",1,"Roseovarius aestuariivivens",5
+1225,TF-12,"DSM 16205, JCM 11545, KCCM 41589, CIP 108136",1,"Rossellomorea aquimaris",4.5
+1224,TF-11,"DSM 16204, JCM 11544, KCCM 41588, CIP 108135",1,"Rossellomorea marisflavi",4.0
+,,,,,4.5
+132581,140917-MRSA-09,"DSM 102816, CCM 8669, LMG 29446, JCM 31759, CIP 111029",1,"Rothia aerolata",4.5
+63,S-877,"DSM 15669, AJ 13480, JCM 12116",1,"Saccharibacter floricola",4
+158656,HS-3,"JCM 32116, InaCC Ar80",1,"Saccharolobus caldissimus",3
+133634,,"KCTC 22684, KCCM 42930, NBRC 105825, IMCC 4453, UCCCB35",1,"Saccharospirillum aestuarii",5.0
+166089,CPA1,"UCCCB45, CECT 9131, LMG 29516",0,"Saccharospirillum correiae",5.0
+132669,MB27,"DSM 46885, CECT 9045",1,"Saccharothrix isguenensis",5
+166091,CPA62,"UCCCB97, CECT 9339, LMG 30108",1,"Salinicola aestuarinus",4.0
+166092,CPA92,"UCCCB98, CECT 9340, LMG 30109",1,"Salinicola endophyticus",4.0
+166090,CPA60,"UCCCB96, CECT 9338, LMG 30107",1,"Salinicola halimionae",4.0
+132891,CG4.1,"DSM 14325, CECT 5903, LMG 23626, UCCCB105, CG 4.1, CIP 109715",1,"Salinicola halophilus",5.0
+166093,CR45,"UCCCB99, CECT 9341, LMG 30105",1,"Salinicola halophyticus",5.0
+166094,CR50,"UCCCB100, CECT 9342, LMG 30106",1,"Salinicola lusitanus",4.0
+162296,DY22,"JCM 18795, CGMCC 1.12381, UCCCB104",1,"Salinicola peritrichatus",4.5
+6080,M27,"DSM 18044, CIP 109895, KCTC 12664, UCCCB106",1,"Salinicola salarius",5.0
+24097,N4,"DSM 22730, CCTCC AB 2012912, KACC 16602, UCCCB108",1,"Salinicola zeshunii",5.0
+156380,,"CCUG 61398, UCCCB111, SLU AS13, AS 13",0,"Serratia plymuthica",4.0
+132354,DHOF10,"DSM 103429, CGMCC 1.13007, KCTC 42631",1,"Silvibacterium dinghuense",4-4.5
+10502,ir6-4,"DSM 24239, CGMCC 1.8860, KCTC 22514, NBRC 103189",0,"Silvimonas amylolytica",4
+10503,ir6-1,"DSM 24036, CGMCC 1.8859, KCTC 22513, NBRC 103188",1,"Silvimonas iriomotensis",4
+1220,R-6540,"DSM 16013, CIP 108820, LMG 22081",1,"Siminovitchia farraginis",5.0
+1221,R-7190,"DSM 16014, CIP 108821, LMG 22080",1,"Siminovitchia fordii",5.0
+1219,R-6514,"DSM 16012, CIP 108822, LMG 22079",1,"Siminovitchia fortis",5
+11944,S26,"DSM 23044, VKM B-2599",1,"Singulisphaera rosea",4.8-5.0
+159719,X1-8,"KCTC 62032, CGMCC 1.16275",1,"Sphingomonas tabacisoli",5
+158698,S7-3-19,"KCTC 52728, JCM 32131",1,"Spirosoma horti",5
+133359,JBM2-3,"KCTC 52176, JCM 31298",1,"Spirosoma swuense",5
+133204,GD201205,"CICC 23867, KCTC 15488",1,"Sporolactobacillus pectinivorans",3
+14405,QC81-06,"DSM 21265, JCM 15325",1,"Sporolactobacillus putidus",4.5-5
+,,,,,4.75
+158794,,"CECT 8596, DSM 26545, CAIM 1838, CIP 111643",1,"Streptococcus penaeicida",4-5
+132341,XY25,"DSM 103384, CCTCC AA 2015019, KCTC 39571",1,"Streptomyces alfalfae",5
+164410,ZFG47,"JCM 32897, CICC 11050",1,"Streptomyces cadmiisoli",4
+15146,,"DSM 40395, ATCC 25497, CBS 105.72, CBS 957.69, ETH 16833, IFO 13085, IMRU 3375, ISP 5395, JCM 4226, JCM 4516, KCTC 9144, NBRC 13085, RIA 1277, BCRC 16231, CBS 105.27, CGMCC 4.1367, CGMCC 4.1774, CIP 105279, ICMP 12543, MTCC 4735, NRRL B-2555, VTT E-072713",0,"Streptomyces griseus",4-5
+134317,,"DSM 41914, ATCC 53653",1,"Streptomyces himastatinicus",4
+16459,HSM#10,"DSM 41950, NRRL B-24669",1,"Streptomyces hypolithicus",<4.3
+133236,,"TRM 46515, CCTCC AA 2015040, KCTC 39729",1,"Streptomyces litoralis",5
+16469,,"DSM 41911, NRRL B-5739",1,"Streptomyces milbemycinicus",4
+141109,594,"IMPPG 594, DSM 41949, NRRL B-24891",1,"Streptomyces odonnellii",4.3
+132670,S4702,"DSM 42103, CGMCC 4.7357, KCTC 29206",1,"Streptomyces ovatisporus",4
+,,,,,5
+133137,PL19,"NRRL B-24728, ICMP 17783",1,"Streptomyces pini",5
+16417,SPR,"DSM 44925, NRRL B-24448",1,"Streptomyces polyantibioticus",<4.3
+132381,169,"DSM 45455, CCUG 62974, MTCC 11561",1,"Streptosporangium algeriense",5
+18037,Kr1,"DSM 17362, VKM B-2339",1,"Sulfobacillus thermotolerans",1.2-2.4
+,,,,,2
+140590,HS-1,"InaCC Ar79, JCM 31740",1,"Sulfodiicoccus acidiphilus",3.0-3.5
+158817,KD-1,"JCM 32117, InaCC Ar81",1,"Sulfurisphaera javensis",3.5-4.0
+133661,PA51,"LMG 21291, MTCC 3852",1,"Swaminathania salitolerans",3.5
+140937,TT1,"JCM 18659, BCRC 80493",1,"Tagaea marina",5
+140,TPB6017,"DSM 23630, VKM B-2570",1,"Telmatobacter bradus",3.0
+,,,,,4.5-5.0
+158558,JDTF-79,"KCTC 52980, NBRC 112903",1,"Tenacibaculum aestuariivivum",5
+140709,RA3-2,"KCTC 52419, NBRC 112382",1,"Tenacibaculum haliotis",4.5
+,,,,,5
+167510,ISS155,"CECT 9533, LMG 31237, ISS 155",1,"Thalassocella blandensis",5
+158713,JDTF-40,"KACC 19433, KCTC 62186, NBRC 113040",1,"Thalassotalea insulae",5.0
+525,CR11,"DSM 19557, ATCC BAA-1533",1,"Thermocrinis minervae",4.8
+140262,3127-1,"DSM 102892, VKM B-3043",1,"Thermodesulfobium acidiphilum",4.8-5.0
+17068,RKU-1,"DSM 13995, JCM 10881, ATCC BAA-488",1,"Thermotoga petrophila",5
+11924,JB-A2,"DSM 12351, ATCC 700878",1,"Thiomicrorhabdus frisia",4.2
+17952,6C,"DSM 21436, JCM 16107",1,"Thiomonas islandica",4
+130227,"NKMU-JPY-345, JPY-345","DSM 29917, BCRC 80258, KCTC 23309, LMG 26032",1,"Trinickia symbiotica",5
+132626,E3/4,"DSM 102221, CCM 8677, CIP 111017",1,"Undibacterium danionis",5
+3017,BAM-48,"DSM 21722, KCTC 22010, NBRC 103145, JCM 18805, NCIMB 14573, BAM 48",1,"Variovorax boronicumulans",4.0
+1484,DSW-10,"DSM 16826, CIP 109001, KCTC 3933",1,"Virgibacillus dokdonensis",5.0
+571,R-17170,"DSM 16319, LMG 22166",1,"Viridibacillus arenosi",5.0
+570,R-16993,"DSM 16317, LMG 22165",1,"Viridibacillus arvi",5.0
+158706,MYP2-2,"KCTC 62141, NBRC 113025",1,"Aequorivita todarodis",5
+166530,IMT-291,"LMG 30636, CIP 111625, CCM 8858, IMT 291",1,"Xinfangfangia humi",0.0-4.0
+166095,22II14-10F7,"UCCCB103, CGMCC 1.12470, LMG 27421, MCCC 1A06481",1,"Zunongwangia atlantica",5.0
+5731,SM-A87,"DSM 18752, CCTCC AB 206139, UCCCB18",1,"Zunongwangia profunda",5.0
