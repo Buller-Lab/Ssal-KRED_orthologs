@@ -6,7 +6,6 @@ from Bio import SeqIO
 from Bio.Align import PairwiseAligner
 from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
 from scipy.spatial.distance import squareform
-from collections import Counter
 from scipy.stats import skew, kurtosis
 
 def calculate_percent_identity(seq1, seq2):
@@ -57,6 +56,7 @@ for i in range(n):
 
 dist_matrix = 100 - identity_matrix
 condensed_dist = squareform(dist_matrix)
+
 Z = linkage(condensed_dist, method='average')
 clusters = fcluster(Z, t=20, criterion='distance')
 
@@ -70,82 +70,45 @@ df.to_csv('sequence_distribution_table.csv', index=False)
 print("CSV table saved as 'sequence_distribution_table.csv'")
 
 pairwise_identities = identity_matrix[np.triu_indices(n, k=1)]
+cluster_counts = pd.Series(clusters).value_counts().sort_index()
 
-cluster_counts = pd.Series(clusters).value_counts()
+plt.rcParams.update({
+    'font.family': 'sans-serif',
+    'font.sans-serif': ['Arial', 'DejaVu Sans', 'Liberation Sans'],
+    'axes.titlesize': 13,
+    'axes.labelsize': 11,
+    'xtick.labelsize': 10,
+    'ytick.labelsize': 10,
+    'figure.titlesize': 14,
+})
 
-standard_aas = 'ACDEFGHIKLMNPQRSTVWY'
-aa_freqs = []
-for seq in sequences:
-    count = Counter(seq)
-    total = len(seq)
-    freq = {aa: count.get(aa, 0) / total for aa in standard_aas}
-    aa_freqs.append(freq)
-df_aa = pd.DataFrame(aa_freqs)
-mean_aa = df_aa.mean().sort_values(ascending=False)
+fig = plt.figure(figsize=(14, 11.2))
 
-fig, axs = plt.subplots(2, 2, figsize=(14, 10))
+ax_dend = plt.subplot2grid((5, 2), (0, 0), colspan=2, rowspan=2)
+dendrogram(Z, labels=ids, leaf_rotation=90, ax=ax_dend, above_threshold_color='grey')
+ax_dend.set_title('a.  Hierarchical clustering dendrogram', loc='left', pad=12)
+ax_dend.set_ylabel('Distance (100 − % identity)')
+ax_dend.set_xlabel('Sequence IDs')
 
-axs[0, 0].hist(lengths, bins=min(30, n//5 + 1), edgecolor='black')
-axs[0, 0].set_title('Sequence Length Distribution')
-axs[0, 0].set_xlabel('Length')
-axs[0, 0].set_ylabel('Frequency')
+ax_cluster = plt.subplot2grid((5, 2), (2, 0), colspan=2)
+ax_cluster.bar(cluster_counts.index.astype(str), cluster_counts.values, edgecolor='black', linewidth=0.6)
+ax_cluster.set_title('b.  Cluster size distribution  (>80% identity clusters)', loc='left', pad=12)
+ax_cluster.set_xlabel('Cluster ID')
+ax_cluster.set_ylabel('Number of sequences')
+ax_cluster.tick_params(axis='x', rotation=90, labelsize=9.5)
 
-axs[0, 1].hist(pairwise_identities, bins=30, edgecolor='black')
-axs[0, 1].set_title('Pairwise % Identity Distribution')
-axs[0, 1].set_xlabel('% Identity')
-axs[0, 1].set_ylabel('Frequency')
+ax_length = plt.subplot2grid((5, 2), (3, 0), rowspan=2)
+ax_length.hist(lengths, bins=min(30, n//5 + 1), edgecolor='black', linewidth=0.6)
+ax_length.set_title('c.  Sequence length distribution', loc='left', pad=10)
+ax_length.set_xlabel('Length (amino acids)')
+ax_length.set_ylabel('Frequency')
 
-axs[1, 0].bar(cluster_counts.index.astype(str), cluster_counts.values, edgecolor='black')
-axs[1, 0].set_title('Cluster Size Distribution (>80% Identity Clusters)')
-axs[1, 0].set_xlabel('Cluster ID')
-axs[1, 0].set_ylabel('Number of Sequences')
-axs[1, 0].tick_params(axis='x', rotation=90)
+ax_identity = plt.subplot2grid((5, 2), (3, 1), rowspan=2)
+ax_identity.hist(pairwise_identities, bins=30, edgecolor='black', linewidth=0.6)
+ax_identity.set_title('d.  Pairwise % identity distribution', loc='left', pad=10)
+ax_identity.set_xlabel('% identity')
+ax_identity.set_ylabel('Frequency')
 
-axs[1, 1].bar(mean_aa.index, mean_aa.values, edgecolor='black')
-axs[1, 1].set_title('Average Amino Acid Composition')
-axs[1, 1].set_xlabel('Amino Acid')
-axs[1, 1].set_ylabel('Mean Frequency')
-
-plt.tight_layout()
-plt.savefig('sequence_distribution_figure.png')
-print("Figure saved as 'sequence_distribution_figure.png'")
-
-plt.figure(figsize=(10, 7))
-dendrogram(Z, labels=ids, leaf_rotation=90)
-plt.title('Hierarchical Clustering Dendrogram')
-plt.xlabel('Sequence IDs')
-plt.ylabel('Distance (100 - %Identity)')
-plt.savefig('sequence_distribution_dendrogram.png')
-print("Dendrogram saved as 'sequence_distribution_dendrogram.png'")
-
-print("\nDataset Statistics for ML Suitability:")
-
-print("\nSequence Length Statistics:")
-print(f"Number of sequences: {n}")
-print(f"Min length: {np.min(lengths)}")
-print(f"Max length: {np.max(lengths)}")
-print(f"Mean length: {np.mean(lengths):.2f}")
-print(f"Median length: {np.median(lengths):.2f}")
-print(f"Std length: {np.std(lengths):.2f}")
-print(f"Skewness: {skew(lengths):.2f}")
-print(f"Kurtosis: {kurtosis(lengths):.2f}")
-
-print("\nPairwise Identity Statistics (non-self pairs):")
-print(f"Number of pairs: {len(pairwise_identities)}")
-print(f"Min %ID: {np.min(pairwise_identities):.2f}")
-print(f"Max %ID: {np.max(pairwise_identities):.2f}")
-print(f"Mean %ID: {np.mean(pairwise_identities):.2f}")
-print(f"Median %ID: {np.median(pairwise_identities):.2f}")
-print(f"Std %ID: {np.std(pairwise_identities):.2f}")
-
-print("\nClustering Statistics (threshold >80% avg. identity):")
-print(f"Number of clusters: {len(cluster_counts)}")
-print(f"Number of singletons: {(cluster_counts == 1).sum()}")
-print(f"Max cluster size: {cluster_counts.max()}")
-print(f"Mean cluster size: {cluster_counts.mean():.2f}")
-print(f"Percentage of sequences in singletons: {((cluster_counts == 1).sum() / n * 100):.2f}%")
-print(f"Percentage of sequences in largest cluster: {(cluster_counts.max() / n * 100):.2f}%")
-
-print("\nAverage Amino Acid Frequencies:")
-for aa, freq in mean_aa.items():
-    print(f"{aa}: {freq:.4f}")
+plt.tight_layout(h_pad=1.4, rect=[0, 0, 1, 0.98])
+plt.savefig('sequence_qc_summary.png', dpi=180, bbox_inches='tight')
+print("Main summary figure saved as 'sequence_qc_summary.png'")
