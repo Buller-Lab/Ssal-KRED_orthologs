@@ -1,30 +1,30 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/08_homolog_bindingsites_superposed/Q12068_superposed_bindingsite_refined.pdb"
-OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/11_detected_cavities/Q12068_cavities.pdb"
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/08_homolog_bindingsites_superposed/Q12068_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/11_detected_cavities/Q12068_cavities.pdb"
 
 [PARAMETERS]
 STEP = 0.6
 
 [RESULTS.VOLUME]
-KAA = 511.49
+KAA = 482.98
 
 [RESULTS.AREA]
-KAA = 408.81
+KAA = 383.71
 
 [RESULTS.MAX_DEPTH]
-KAA = 5.37
+KAA = 4.61
 
 [RESULTS.AVG_DEPTH]
-KAA = 1.6
+KAA = 1.44
 
 [RESULTS.AVG_HYDROPATHY]
-KAA = -0.21
+KAA = -0.23
 EisenbergWeiss = [ -1.42, 2.6,]
 
 [RESULTS.RESIDUES]
-KAA = [ [ "9", "A", "ASN",], [ "11", "A", "PHE",], [ "12", "A", "ILE",], [ "13", "A", "ALA",], [ "30", "A", "SER",], [ "32", "A", "ARG",], [ "36", "A", "LYS",], [ "55", "A", "VAL",], [ "57", "A", "ASP",], [ "58", "A", "ILE",], [ "81", "A", "THR",], [ "82", "A", "ALA",], [ "83", "A", "SER",], [ "84", "A", "PRO",], [ "85", "A", "PHE",], [ "99", "A", "PRO",], [ "125", "A", "THR",], [ "127", "A", "SER",], [ "165", "A", "TYR",], [ "169", "A", "LYS",], [ "196", "A", "PRO",], [ "198", "A", "TYR",], [ "199", "A", "VAL",], [ "214", "A", "ASN",], [ "216", "A", "SER",],]
+KAA = [ [ "9", "A", "ASN",], [ "11", "A", "PHE",], [ "12", "A", "ILE",], [ "13", "A", "ALA",], [ "30", "A", "SER",], [ "32", "A", "ARG",], [ "55", "A", "VAL",], [ "57", "A", "ASP",], [ "58", "A", "ILE",], [ "59", "A", "SER",], [ "81", "A", "THR",], [ "82", "A", "ALA",], [ "83", "A", "SER",], [ "84", "A", "PRO",], [ "85", "A", "PHE",], [ "99", "A", "PRO",], [ "125", "A", "THR",], [ "127", "A", "SER",], [ "165", "A", "TYR",], [ "169", "A", "LYS",], [ "196", "A", "PRO",], [ "198", "A", "TYR",], [ "199", "A", "VAL",], [ "214", "A", "ASN",], [ "216", "A", "SER",],]
 
 [RESULTS.FREQUENCY.KAA.RESIDUES]
 ALA = 2
@@ -32,10 +32,10 @@ ARG = 1
 ASN = 2
 ASP = 1
 ILE = 2
-LYS = 2
+LYS = 1
 PHE = 2
 PRO = 3
-SER = 4
+SER = 5
 THR = 2
 TYR = 2
 VAL = 2
@@ -43,7 +43,7 @@ VAL = 2
 [RESULTS.FREQUENCY.KAA.CLASS]
 R1 = 9
 R2 = 4
-R3 = 8
+R3 = 9
 R4 = 1
-R5 = 3
+R5 = 2
 RX = 0

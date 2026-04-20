@@ -2,15 +2,21 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import gaussian_kde
+import sys
+import argparse
 
-CSV_FILE = "histogram_data_solubility_tm_seqid.csv"
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--input', required=True, help='Input CSV file')
+args = parser.parse_args()
+
+CSV_FILE = args.input
 
 df = pd.read_csv(CSV_FILE)
-df['Solubility'] = df['Solubility'].astype(bool)
-df['seq_id'] = df['sequence_identity'] * 100
+df['solubly_expressed'] = df['solubly_expressed'].astype(bool)
+df['SeqID'] = df['SeqID'] * 100
 
 all_data = df
-soluble_only = df[df['Solubility']]
+soluble_only = df[df['solubly_expressed']]
 
 n_all = len(all_data)
 n_sol = len(soluble_only)
@@ -66,32 +72,32 @@ def draw_split_violin(ax, data_all, data_sol, pos, color, is_percent=False):
                      facecolor='white', edgecolor='black', lw=2.5, zorder=6))
         ax.plot([xL, xR], [med, med], color='black', lw=3, zorder=7)
 
-        fmt = ".1f" if is_percent else ".3f"
+        fmt = ".1f" if is_percent else ".2f"
         ha = 'right' if side < 0 else 'left'
         ax.text(xL - 0.03 if side < 0 else xR + 0.03, med,
                 f'{med:{fmt}}', ha=ha, va='center',
-                fontweight='bold', fontsize=11, color='black', zorder=8)
+                fontweight='bold', fontsize=18, color='black', zorder=8)
 
     draw_half(data_all, -1, hatch=None)
     draw_half(data_sol, +1, hatch='//////')
 
 ax1.set_ylim(-2, 102)
-ax1.set_ylabel('Sequence Identity (%)', color=color_seq, fontsize=14, fontweight='bold')
-ax1.tick_params(axis='y', colors=color_seq, labelsize=12, width=2)
+ax1.set_ylabel('SeqID (%)', color=color_seq, fontsize=18, fontweight='bold')
+ax1.tick_params(axis='y', colors=color_seq, labelsize=18, width=2)
 ax1.spines['left'].set_color(color_seq)
 ax1.spines['left'].set_linewidth(2.5)
 
-draw_split_violin(ax1, all_data['seq_id'], soluble_only['seq_id'],
+draw_split_violin(ax1, all_data['SeqID'], soluble_only['SeqID'],
                   pos=0.85, color=color_seq, is_percent=True)
 
 ax2.set_ylim(-0.02, 1.02)
-ax2.set_ylabel('TM-Score', color=color_tm, fontsize=14, fontweight='bold')
-ax2.tick_params(axis='y', colors=color_tm, labelsize=12, width=2)
+ax2.set_ylabel('TM-Score', color=color_tm, fontsize=18, fontweight='bold')
+ax2.tick_params(axis='y', colors=color_tm, labelsize=18, width=2)
 ax2.spines['right'].set_color(color_tm)
 ax2.spines['right'].set_linewidth(2.5)
 ax2.spines['right'].set_visible(True)
 
-draw_split_violin(ax2, all_data['tm_score'], soluble_only['tm_score'],
+draw_split_violin(ax2, all_data['TM-score'], soluble_only['TM-score'],
                   pos=1.15, color=color_tm, is_percent=False)
 
 ax1.set_xlim(0.45, 1.55)
@@ -112,9 +118,9 @@ ax1.legend(handles=legend_elements,
            loc='upper center',
            bbox_to_anchor=(0.5, -0.02),
            ncol=2,
-           fontsize=13,
+           fontsize=18,
            frameon=False)
 
 plt.subplots_adjust(left=0.16, right=0.84, top=0.96, bottom=0.09)
-plt.savefig("split_violin_solubility.pdf", format="pdf", bbox_inches="tight", transparent=False)
+plt.savefig("split_violin_solubility.svg", format="svg", bbox_inches="tight", transparent=False)
 plt.show()

@@ -1,8 +1,8 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/reference_bindingsite.pdb"
-OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/reference_cavity_analysis/reference_cavities.pdb"
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/reference_bindingsite.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/reference_cavity_analysis/reference_cavities.pdb"
 
 [PARAMETERS]
 STEP = 0.6

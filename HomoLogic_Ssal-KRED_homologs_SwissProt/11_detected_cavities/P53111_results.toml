@@ -1,35 +1,35 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/08_homolog_bindingsites_superposed/P53111_superposed_bindingsite_refined.pdb"
-OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/11_detected_cavities/P53111_cavities.pdb"
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/08_homolog_bindingsites_superposed/P53111_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/11_detected_cavities/P53111_cavities.pdb"
 
 [PARAMETERS]
 STEP = 0.6
 
 [RESULTS.VOLUME]
-KAA = 134.78
-KAB = 314.5
+KAA = 123.34
+KAB = 291.82
 
 [RESULTS.AREA]
-KAA = 117.75
-KAB = 255.14
+KAA = 108.72
+KAB = 233.32
 
 [RESULTS.MAX_DEPTH]
-KAA = 2.16
-KAB = 3.7
+KAA = 2.4
+KAB = 4.02
 
 [RESULTS.AVG_DEPTH]
-KAA = 0.71
-KAB = 1.27
+KAA = 0.7
+KAB = 1.46
 
 [RESULTS.AVG_HYDROPATHY]
-KAA = 0.33
-KAB = -0.34
+KAA = 0.29
+KAB = -0.36
 EisenbergWeiss = [ -1.42, 2.6,]
 
 [RESULTS.RESIDUES]
-KAA = [ [ "13", "A", "THR",], [ "34", "A", "SER",], [ "36", "A", "ARG",], [ "40", "A", "LYS",], [ "59", "A", "VAL",], [ "61", "A", "ASP",], [ "62", "A", "ILE",], [ "86", "A", "ALA",], [ "88", "A", "PRO",], [ "103", "A", "PRO",],]
+KAA = [ [ "13", "A", "THR",], [ "34", "A", "SER",], [ "36", "A", "ARG",], [ "59", "A", "VAL",], [ "61", "A", "ASP",], [ "62", "A", "ILE",], [ "86", "A", "ALA",], [ "88", "A", "PRO",], [ "103", "A", "PRO",],]
 KAB = [ [ "15", "A", "PHE",], [ "16", "A", "ILE",], [ "17", "A", "ALA",], [ "85", "A", "THR",], [ "86", "A", "ALA",], [ "87", "A", "SER",], [ "89", "A", "PHE",], [ "129", "A", "THR",], [ "131", "A", "SER",], [ "169", "A", "TYR",], [ "173", "A", "LYS",], [ "200", "A", "PRO",], [ "202", "A", "PHE",], [ "203", "A", "VAL",], [ "218", "A", "ASN",], [ "220", "A", "SER",],]
 
 [RESULTS.FREQUENCY.KAA.RESIDUES]
@@ -37,7 +37,6 @@ ALA = 1
 ARG = 1
 ASP = 1
 ILE = 1
-LYS = 1
 PRO = 2
 SER = 1
 THR = 1
@@ -48,7 +47,7 @@ R1 = 5
 R2 = 0
 R3 = 2
 R4 = 1
-R5 = 2
+R5 = 1
 RX = 0
 
 [RESULTS.FREQUENCY.KAB.RESIDUES]

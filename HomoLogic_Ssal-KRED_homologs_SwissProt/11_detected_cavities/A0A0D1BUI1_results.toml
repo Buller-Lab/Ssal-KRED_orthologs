@@ -1,58 +1,32 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/08_homolog_bindingsites_superposed/A0A0D1BUI1_superposed_bindingsite_refined.pdb"
-OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/11_detected_cavities/A0A0D1BUI1_cavities.pdb"
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/08_homolog_bindingsites_superposed/A0A0D1BUI1_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/11_detected_cavities/A0A0D1BUI1_cavities.pdb"
 
 [PARAMETERS]
 STEP = 0.6
 
 [RESULTS.VOLUME]
-KAA = 149.9
-KAB = 362.23
+KAA = 352.94
 
 [RESULTS.AREA]
-KAA = 117.18
-KAB = 240.45
+KAA = 244.52
 
 [RESULTS.MAX_DEPTH]
-KAA = 2.47
-KAB = 4.02
+KAA = 3.6
 
 [RESULTS.AVG_DEPTH]
-KAA = 0.73
-KAB = 1.28
+KAA = 1.25
 
 [RESULTS.AVG_HYDROPATHY]
-KAA = 0.4
-KAB = -0.48
+KAA = -0.5
 EisenbergWeiss = [ -1.42, 2.6,]
 
 [RESULTS.RESIDUES]
-KAA = [ [ "13", "A", "THR",], [ "16", "A", "ASN",], [ "37", "A", "THR",], [ "38", "A", "VAL",], [ "39", "A", "ARG",], [ "40", "A", "ARG",], [ "61", "A", "ILE",], [ "64", "A", "LEU",], [ "82", "A", "HIS",], [ "84", "A", "ALA",], [ "85", "A", "SER",], [ "86", "A", "THR",], [ "104", "A", "SER",],]
-KAB = [ [ "18", "A", "PHE",], [ "19", "A", "VAL",], [ "83", "A", "VAL",], [ "84", "A", "ALA",], [ "85", "A", "SER",], [ "87", "A", "VAL",], [ "88", "A", "PRO",], [ "123", "A", "THR",], [ "125", "A", "SER",], [ "126", "A", "MET",], [ "127", "A", "SER",], [ "153", "A", "MET",], [ "156", "A", "TYR",], [ "160", "A", "LYS",], [ "183", "A", "PRO",], [ "185", "A", "TYR",], [ "186", "A", "ILE",], [ "200", "A", "SER",], [ "202", "A", "SER",],]
+KAA = [ [ "18", "A", "PHE",], [ "19", "A", "VAL",], [ "83", "A", "VAL",], [ "85", "A", "SER",], [ "87", "A", "VAL",], [ "88", "A", "PRO",], [ "123", "A", "THR",], [ "125", "A", "SER",], [ "126", "A", "MET",], [ "127", "A", "SER",], [ "153", "A", "MET",], [ "156", "A", "TYR",], [ "160", "A", "LYS",], [ "183", "A", "PRO",], [ "184", "A", "VAL",], [ "185", "A", "TYR",], [ "186", "A", "ILE",], [ "200", "A", "SER",], [ "202", "A", "SER",],]
 
 [RESULTS.FREQUENCY.KAA.RESIDUES]
-ALA = 1
-ARG = 2
-ASN = 1
-HIS = 1
-ILE = 1
-LEU = 1
-SER = 2
-THR = 3
-VAL = 1
-
-[RESULTS.FREQUENCY.KAA.CLASS]
-R1 = 4
-R2 = 0
-R3 = 6
-R4 = 0
-R5 = 3
-RX = 0
-
-[RESULTS.FREQUENCY.KAB.RESIDUES]
-ALA = 1
 ILE = 1
 LYS = 1
 MET = 2
@@ -61,9 +35,9 @@ PRO = 2
 SER = 5
 THR = 1
 TYR = 2
-VAL = 3
+VAL = 4
 
-[RESULTS.FREQUENCY.KAB.CLASS]
+[RESULTS.FREQUENCY.KAA.CLASS]
 R1 = 7
 R2 = 3
 R3 = 8

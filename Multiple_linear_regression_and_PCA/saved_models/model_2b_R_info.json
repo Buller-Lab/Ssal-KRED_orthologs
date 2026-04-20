@@ -1,0 +1,18 @@
+{
+    "target": "2b (R)",
+    "top_features": [
+        "cavity_frequency_Polar_uncharged",
+        "cavity_frequency_Aromatic",
+        "tm_score"
+    ],
+    "coefficients": {
+        "cavity_frequency_Polar_uncharged": 0.6082152296190871,
+        "cavity_frequency_Aromatic": 0.34295611015505434,
+        "tm_score": 0.4897670015302087
+    },
+    "intercept": 0.6514492753623193,
+    "r2": 0.6581037132891512,
+    "q2_loo": 0.592154097981977,
+    "n_samples": 69,
+    "model_file": "model_2b_R.pkl"
+}

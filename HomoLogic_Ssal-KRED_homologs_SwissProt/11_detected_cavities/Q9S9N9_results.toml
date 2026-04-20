@@ -1,47 +1,49 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/08_homolog_bindingsites_superposed/Q9S9N9_superposed_bindingsite_refined.pdb"
-OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/11_detected_cavities/Q9S9N9_cavities.pdb"
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/08_homolog_bindingsites_superposed/Q9S9N9_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/11_detected_cavities/Q9S9N9_cavities.pdb"
 
 [PARAMETERS]
 STEP = 0.6
 
 [RESULTS.VOLUME]
-KAA = 317.74
+KAA = 382.97
 
 [RESULTS.AREA]
-KAA = 209.03
+KAA = 264.49
 
 [RESULTS.MAX_DEPTH]
-KAA = 3.79
+KAA = 3.93
 
 [RESULTS.AVG_DEPTH]
-KAA = 1.14
+KAA = 1.16
 
 [RESULTS.AVG_HYDROPATHY]
-KAA = -0.24
+KAA = -0.25
 EisenbergWeiss = [ -1.42, 2.6,]
 
 [RESULTS.RESIDUES]
-KAA = [ [ "21", "A", "TYR",], [ "22", "A", "ILE",], [ "23", "A", "ALA",], [ "88", "A", "THR",], [ "89", "A", "ALA",], [ "90", "A", "SER",], [ "92", "A", "VAL",], [ "125", "A", "THR",], [ "127", "A", "SER",], [ "161", "A", "TYR",], [ "165", "A", "LYS",], [ "188", "A", "PRO",], [ "190", "A", "LEU",], [ "191", "A", "VAL",], [ "201", "A", "ASN",], [ "202", "A", "ALA",], [ "203", "A", "SER",],]
+KAA = [ [ "21", "A", "TYR",], [ "22", "A", "ILE",], [ "23", "A", "ALA",], [ "42", "A", "ARG",], [ "68", "A", "ASP",], [ "69", "A", "LEU",], [ "88", "A", "THR",], [ "89", "A", "ALA",], [ "90", "A", "SER",], [ "91", "A", "PRO",], [ "92", "A", "VAL",], [ "102", "A", "PRO",], [ "125", "A", "THR",], [ "127", "A", "SER",], [ "128", "A", "ILE",], [ "161", "A", "TYR",], [ "165", "A", "LYS",], [ "188", "A", "PRO",], [ "191", "A", "VAL",], [ "201", "A", "ASN",], [ "202", "A", "ALA",], [ "203", "A", "SER",],]
 
 [RESULTS.FREQUENCY.KAA.RESIDUES]
 ALA = 3
+ARG = 1
 ASN = 1
-ILE = 1
+ASP = 1
+ILE = 2
 LEU = 1
 LYS = 1
-PRO = 1
+PRO = 3
 SER = 3
 THR = 2
 TYR = 2
 VAL = 2
 
 [RESULTS.FREQUENCY.KAA.CLASS]
-R1 = 8
+R1 = 11
 R2 = 2
 R3 = 6
-R4 = 0
-R5 = 1
+R4 = 1
+R5 = 2
 RX = 0

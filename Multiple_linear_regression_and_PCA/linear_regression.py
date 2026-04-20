@@ -3,11 +3,13 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression, LassoCV
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import LeaveOneOut
 from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
-import seaborn as sns
 import os
+import pickle
+import json
 
 FEATURES = [
     "sequence_identity", "rmsd", "tm_score", "rmsd_bindingsite",
@@ -18,137 +20,197 @@ FEATURES = [
     "cavity_frequency_Non-standard", "cavity_rmsd", "cavity_n_points"
 ]
 
-#TARGETS = ["2b (R)"]
-TARGETS = ["ee 2b (%)"]
-
-parser = argparse.ArgumentParser()
-parser.add_argument("-i", "--input", required=True)
+parser = argparse.ArgumentParser(description="LASSO + MLR with top-3 features, LOO-CV, and model saving")
+parser.add_argument("-i", "--input", required=True, help="Input CSV file")
+parser.add_argument("-t", "--target", required=True, help="Name of the target column to predict (e.g. '2b (R)')")
 args = parser.parse_args()
 
-plot_folder = "mlr_lasso_top3"
+plot_folder = "mlr_lasso_top3_fixed_features_LOO"
+model_folder = "saved_models"
 os.makedirs(plot_folder, exist_ok=True)
+os.makedirs(model_folder, exist_ok=True)
 
 df = pd.read_csv(args.input)
-available_features = [f for f in FEATURES if f in df.columns]
-df = df[available_features + TARGETS].dropna()
 
-print(f"Final modeling shape: {df.shape}")
+if args.target not in df.columns:
+    print(f"Error: Target column '{args.target}' not found in the input file.")
+    exit(1)
+
+available_features = [f for f in FEATURES if f in df.columns]
+df = df[available_features + [args.target]].dropna().reset_index(drop=True)
 
 X_raw = df[available_features]
-y_dict = {t: df[t] for t in TARGETS if t in df.columns}
+y = df[args.target].values
+y_name = args.target
 
 scaler = StandardScaler()
-X_std = pd.DataFrame(
-    scaler.fit_transform(X_raw),
-    columns=X_raw.columns,
-    index=X_raw.index
+X_std = scaler.fit_transform(X_raw)
+feature_names = available_features
+
+COLORS = ['#1f77b4', '#76b689', '#d62728']
+
+lasso = LassoCV(cv=5, random_state=42, max_iter=30000, alphas=200, n_jobs=-1)
+lasso.fit(X_std, y)
+
+coef = pd.Series(lasso.coef_, index=feature_names)
+top_features = coef.abs().sort_values(ascending=False).head(3).index.tolist()
+n_selected = len(top_features)
+
+if n_selected == 0:
+    print(f"No features selected for target: {y_name}")
+    exit(0)
+
+sel_idx = [feature_names.index(f) for f in top_features]
+X_sel = X_std[:, sel_idx]
+
+model_full = LinearRegression().fit(X_sel, y)
+y_pred_full = model_full.predict(X_sel)
+
+r2_full   = r2_score(y, y_pred_full)
+rmse_full = np.sqrt(mean_squared_error(y, y_pred_full))
+adj_r2    = 1 - (1 - r2_full) * (len(y) - 1) / (len(y) - n_selected - 1) if len(y) > n_selected + 1 else r2_full
+
+cv = LeaveOneOut()
+y_pred_cv = np.zeros_like(y, dtype=float)
+ols = LinearRegression()
+
+for train_idx, test_idx in cv.split(X_sel):
+    ols.fit(X_sel[train_idx], y[train_idx])
+    y_pred_cv[test_idx] = ols.predict(X_sel[test_idx])
+
+press     = np.sum((y - y_pred_cv)**2)
+tss       = np.sum((y - np.mean(y))**2)
+q2        = 1 - press / tss if tss > 1e-10 else np.nan
+rmse_loo  = np.sqrt(mean_squared_error(y, y_pred_cv))
+mae_loo   = np.mean(np.abs(y - y_pred_cv))
+pcc_loo, _ = pearsonr(y, y_pred_cv)
+
+delta = r2_full - q2 if not np.isnan(q2) else np.nan
+
+print(f"{'═' * 70}")
+print(f"Target: {y_name}")
+print(f"Number of samples: {len(y)}")
+print(f"{'─' * 70}")
+print("Top 3 features (LASSO):")
+for i, feat in enumerate(top_features, 1):
+    beta = coef[feat]
+    print(f"  {i}. {feat} (β = {beta:>6.3f})")
+print(f"\nFull-data fit:")
+print(f"  R²     = {r2_full:>6.3f}")
+print(f"  adj R² = {adj_r2:>6.3f}")
+print(f"  RMSE   = {rmse_full:>6.3f}")
+print(f"\nLOO-CV performance:")
+print(f"  Q²     = {q2:>6.3f}")
+print(f"  RMSE   = {rmse_loo:>6.3f}")
+print(f"  MAE    = {mae_loo:>6.3f}")
+print(f"  PCC    = {pcc_loo:>6.3f}")
+print(f"  Δ(R² - Q²) = {delta:>6.3f}")
+print("\nInterpretation:")
+if np.isnan(q2):
+    print("  → Q² could not be computed (very low variance in y?)")
+elif delta < 0.05:
+    print("  → Excellent internal predictivity — very little overfitting")
+elif delta < 0.15:
+    print("  → Good internal predictivity — mild overfitting acceptable")
+elif delta < 0.30:
+    print("  → Moderate overfitting detected — still potentially useful")
+else:
+    print("  → Strong overfitting or limited generalizability")
+print(f"{'═' * 70}\n")
+
+safe_name = y_name.replace(" ", "_").replace("(", "").replace(")", "").replace("%", "pct").replace("/", "_")
+
+model_data = {
+    "target": y_name,
+    "top_features": top_features,
+    "scaler": scaler,
+    "model": model_full,
+    "feature_names": feature_names,
+    "selected_indices": sel_idx,
+    "coef": model_full.coef_.tolist(),
+    "intercept": float(model_full.intercept_),
+    "training_samples": len(y),
+    "r2_full": float(r2_full),
+    "q2_loo": float(q2) if not np.isnan(q2) else None,
+}
+
+model_path = os.path.join(model_folder, f"model_{safe_name}.pkl")
+with open(model_path, "wb") as f:
+    pickle.dump(model_data, f)
+
+json_path = os.path.join(model_folder, f"model_{safe_name}_info.json")
+with open(json_path, "w") as f:
+    json.dump({
+        "target": y_name,
+        "top_features": top_features,
+        "coefficients": dict(zip(top_features, model_full.coef_.tolist())),
+        "intercept": float(model_full.intercept_),
+        "r2": float(r2_full),
+        "q2_loo": float(q2) if not np.isnan(q2) else None,
+        "n_samples": len(y),
+        "model_file": f"model_{safe_name}.pkl"
+    }, f, indent=4)
+
+print(f"Model successfully saved as: {model_path}")
+print(f"Model info summary saved as: {json_path}")
+
+abs_coef = coef[top_features].abs().values
+abs_coef_norm = abs_coef / abs_coef.sum() if abs_coef.sum() > 0 else abs_coef
+
+fig_pie, ax_pie = plt.subplots(figsize=(7, 5.5))
+wedges, _, autotexts = ax_pie.pie(
+    abs_coef_norm,
+    labels=None,
+    colors=COLORS[:n_selected],
+    autopct='%1.1f%%' if abs_coef.sum() > 0 else None,
+    startangle=90,
+    textprops={'fontsize': 11},
+    pctdistance=0.78,
+    wedgeprops={'edgecolor': 'white', 'linewidth': 1.2}
 )
 
-results = []
+ax_pie.legend(
+    wedges,
+    [f.replace("_", " ").title() for f in top_features],
+    title="Top features (LASSO |β|)",
+    loc="center left",
+    bbox_to_anchor=(1.0, 0.5, 0.35, 0),
+    fontsize=10.5,
+    title_fontsize=11.5,
+    frameon=True,
+    edgecolor='black',
+    facecolor='white',
+    labelspacing=0.8
+)
 
-distinct_colors = [
-    '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
-    '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'
-]
+centre_circle = plt.Circle((0,0), 0.55, fc='white', linewidth=1.2, edgecolor='lightgray')
+ax_pie.add_artist(centre_circle)
 
-for target_name, y in y_dict.items():
-    lasso = LassoCV(cv=5, random_state=42, max_iter=30000, n_alphas=200)
-    lasso.fit(X_std, y)
+ax_pie.set_title(f"Feature importance – {y_name}\n(LASSO absolute coefficients)",
+                 fontsize=13, pad=18)
 
-    coef_lasso = pd.Series(lasso.coef_, index=X_std.columns)
+plt.tight_layout()
+plt.savefig(os.path.join(plot_folder, f"pie_importance_{safe_name}.png"), dpi=300, bbox_inches="tight")
+plt.savefig(os.path.join(plot_folder, f"pie_importance_{safe_name}.svg"), format="svg", bbox_inches="tight")
+plt.close(fig_pie)
 
-    top_features = coef_lasso.abs().sort_values(ascending=False).head(3).index.tolist()
-    n_selected = len(top_features)
+fig_scatter, ax_scatter = plt.subplots(figsize=(6.5, 6))
+ax_scatter.scatter(y, y_pred_full, color='#1f77b4', alpha=0.7, edgecolor='white', s=60, linewidth=0.8)
 
-    if n_selected == 0:
-        continue
+min_val = min(np.min(y), np.min(y_pred_full))
+max_val = max(np.max(y), np.max(y_pred_full))
+ax_scatter.plot([min_val, max_val], [min_val, max_val], color='gray', linestyle='--', linewidth=1.5, alpha=0.7)
 
-    X_selected = X_std[top_features]
-    model = LinearRegression().fit(X_selected, y)
+ax_scatter.set_xlabel(f"Observed {y_name}", fontsize=12)
+ax_scatter.set_ylabel(f"Predicted {y_name}", fontsize=12)
+ax_scatter.set_title(f"Linear Regression Fit – {y_name}\n(R² = {r2_full:.3f})", fontsize=13, pad=15)
 
-    coef_series = pd.Series(model.coef_, index=top_features, name="β_std")
-    coef_series = coef_series.sort_values(key=abs, ascending=False)
+ax_scatter.grid(True, linestyle='--', alpha=0.4)
+ax_scatter.set_aspect('equal')
 
-    y_pred = model.predict(X_selected)
+plt.tight_layout()
+plt.savefig(os.path.join(plot_folder, f"scatter_fit_{safe_name}.png"), dpi=300, bbox_inches="tight")
+plt.savefig(os.path.join(plot_folder, f"scatter_fit_{safe_name}.svg"), format="svg", bbox_inches="tight")
+plt.close(fig_scatter)
 
-    r2_val = r2_score(y, y_pred)
-    rmse_val = np.sqrt(mean_squared_error(y, y_pred))
-    pcc, _ = pearsonr(y, y_pred)
-    n = len(y)
-    p = n_selected
-    adj_r2 = 1 - (1 - r2_val) * (n - 1) / (n - p - 1) if n > p + 1 else r2_val
-
-    sizes = np.abs(coef_series)
-    labels = [f"{feat}\n{coef:+.3f}" for feat, coef in coef_series.items()]
-
-    pie_colors = distinct_colors[:n_selected]
-
-    fig, ax = plt.subplots(figsize=(9, 9))
-    wedges, texts, autotexts = ax.pie(
-        sizes,
-        labels=labels,
-        colors=pie_colors,
-        autopct='%1.1f%%',
-        startangle=90,
-        pctdistance=0.82,
-        labeldistance=1.05,
-        textprops={'fontsize': 11, 'fontweight': 'medium'},
-        wedgeprops={'edgecolor': 'white', 'linewidth': 1.2}
-    )
-
-    for autotext in autotexts:
-        autotext.set_color('white')
-        autotext.set_fontweight('bold')
-
-    ax.set_title(f"{target_name} — Feature Importance (Top {n_selected})\nLasso → OLS   |   adj R² = {adj_r2:.3f}   |   n = {n}", fontsize=14, pad=20)
-
-    centre_circle = plt.Circle((0,0), 0.65, fc='white')
-    fig.gca().add_artist(centre_circle)
-
-    plt.axis('equal')
-    plt.tight_layout()
-    safe_name = target_name.replace(' ', '_').replace('%', 'pct')
-    plt.savefig(f"{plot_folder}/importance_pie_{safe_name}.png", dpi=220, bbox_inches='tight')
-    plt.close()
-
-    fig, ax = plt.subplots(figsize=(6, 6))
-    sns.regplot(
-        x=y, y=y_pred,
-        scatter_kws={'alpha':0.7, 's':70, 'edgecolor':'none'},
-        line_kws={'color':'red', 'lw':1.5, 'linestyle':'--'},
-        ci=None,
-        ax=ax
-    )
-    ax.set_xlabel(f"Observed {target_name}", fontsize=12)
-    ax.set_ylabel(f"Predicted {target_name}", fontsize=12)
-    ax.set_title(f"{target_name} — Observed vs Predicted\nn = {n}", fontsize=13, pad=15)
-
-    metrics_text = f"R²   = {r2_val:.3f}\nadj R² = {adj_r2:.3f}\nRMSE = {rmse_val:.3f}\nPCC  = {pcc:.3f}"
-    ax.text(
-        0.05, 0.95, metrics_text,
-        transform=ax.transAxes,
-        fontsize=11,
-        verticalalignment='top',
-        bbox=dict(boxstyle='round,pad=0.5', facecolor='white', alpha=0.85, edgecolor='gray')
-    )
-
-    ax.grid(True, alpha=0.3, linestyle='--')
-    ax.set_aspect('equal')
-    plt.tight_layout()
-    plt.savefig(f"{plot_folder}/obs_vs_pred_with_fit_{safe_name}.png", dpi=220, bbox_inches='tight')
-    plt.close()
-
-    res_row = {
-        "target": target_name,
-        "n": n,
-        "n_features": n_selected,
-        "adj_R2": adj_r2,
-        "R2": r2_val,
-        "RMSE": rmse_val,
-        "PCC": pcc,
-        **{f"coef_{feat}": val for feat, val in coef_series.items()}
-    }
-    results.append(res_row)
-
-pd.DataFrame(results).to_excel(f"{plot_folder}/summary_lasso_top3.xlsx", index=False)
-print(f"\nResults & plots saved to: {plot_folder}")
+print(f"Plots (pie + scatter) saved to: {plot_folder}")

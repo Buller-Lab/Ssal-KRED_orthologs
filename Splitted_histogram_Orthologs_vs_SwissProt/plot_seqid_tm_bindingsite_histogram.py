@@ -2,8 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import gaussian_kde
+import argparse
 
-CSV_FILE = "histogram_data_tested_orthologs_vs_swissprot_homologs.csv"
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--input', required=True, help='Input CSV file')
+args = parser.parse_args()
+
+CSV_FILE = args.input
+
 COL_DATASET = "dataset"
 COL_SEQ = "sequence_identity"
 COL_TM  = "tm_score"
@@ -31,7 +37,7 @@ n_right = len(data_right)
 
 fig, (ax_seq, ax_tm, ax_bind) = plt.subplots(
     1, 3,
-    figsize=(9.9, 8),
+    figsize=(15, 8),
     sharey=False,
     gridspec_kw={'wspace': 0.12}
 )
@@ -39,7 +45,7 @@ fig, (ax_seq, ax_tm, ax_bind) = plt.subplots(
 def standard_kde(data):
     return gaussian_kde(np.asarray(data))
 
-def draw_split_violin(ax, data_all, data_sol, pos, color, is_percent=False, fmt=".3f"):
+def draw_split_violin(ax, data_all, data_sol, pos, color, is_percent=False, fmt=".2f"):
     width = 0.38
     box_width = 0.08
 
@@ -85,7 +91,7 @@ def draw_split_violin(ax, data_all, data_sol, pos, color, is_percent=False, fmt=
         ha = 'right' if side < 0 else 'left'
         ax.text(xL - 0.03 if side < 0 else xR + 0.03, med,
                 f'{med:{fmt}}', ha=ha, va='center',
-                fontweight='bold', fontsize=11, color='black', zorder=8)
+                fontweight='bold', fontsize=15, color='black', zorder=8)
 
     draw_half(data_all, -1, hatch=None)
     draw_half(data_sol, +1, hatch='//////')
@@ -93,16 +99,16 @@ def draw_split_violin(ax, data_all, data_sol, pos, color, is_percent=False, fmt=
 draw_split_violin(ax_seq, data_left[COL_SEQ], data_right[COL_SEQ],
                   pos=1, color=COLOR_SEQ, is_percent=True, fmt=".1f")
 ax_seq.set_ylim(-2, 102)
-ax_seq.set_ylabel('Sequence Identity (%)', color=COLOR_SEQ, fontsize=14, fontweight='bold')
-ax_seq.tick_params(axis='y', colors=COLOR_SEQ, labelsize=12, width=2)
+ax_seq.set_ylabel('Sequence Identity (%)', color=COLOR_SEQ, fontsize=18, fontweight='bold')
+ax_seq.tick_params(axis='y', colors=COLOR_SEQ, labelsize=18, width=2)
 ax_seq.spines['left'].set_color(COLOR_SEQ)
 ax_seq.spines['left'].set_linewidth(2.5)
 
 draw_split_violin(ax_tm, data_left[COL_TM], data_right[COL_TM],
-                  pos=1, color=COLOR_TM, is_percent=False, fmt=".3f")
+                  pos=1, color=COLOR_TM, is_percent=False, fmt=".2f")
 ax_tm.set_ylim(-0.02, 1.02)
-ax_tm.set_ylabel('TM-Score', color=COLOR_TM, fontsize=14, fontweight='bold')
-ax_tm.tick_params(axis='y', colors=COLOR_TM, labelsize=12, width=2)
+ax_tm.set_ylabel('TM-Score', color=COLOR_TM, fontsize=18, fontweight='bold')
+ax_tm.tick_params(axis='y', colors=COLOR_TM, labelsize=18, width=2)
 ax_tm.spines['left'].set_color(COLOR_TM)
 ax_tm.spines['left'].set_linewidth(2.5)
 
@@ -110,7 +116,7 @@ draw_split_violin(ax_bind, data_left[COL_BIND], data_right[COL_BIND],
                   pos=1, color=COLOR_BIND, is_percent=False, fmt=".3f")
 ax_bind.set_ylim(-0.02, 1.02)
 ax_bind.set_ylabel('Binding-Site Similarity Score', color=COLOR_BIND, fontsize=14, fontweight='bold')
-ax_bind.tick_params(axis='y', colors=COLOR_BIND, labelsize=12, width=2)
+ax_bind.tick_params(axis='y', colors=COLOR_BIND, labelsize=18, width=2)
 ax_bind.spines['left'].set_color(COLOR_BIND)
 ax_bind.spines['left'].set_linewidth(2.5)
 
@@ -134,11 +140,11 @@ ax_tm.legend(handles=legend_elements,
              loc='upper center',
              bbox_to_anchor=(0.5, -0.04),
              ncol=2,
-             fontsize=13,
+             fontsize=18,
              frameon=False)
 
 plt.subplots_adjust(left=0.11, right=0.96, top=0.96, bottom=0.12)
 
-plt.savefig("split_violins_orthologs_vs_swissprot_homologs.pdf",
-            format="pdf", bbox_inches="tight", dpi=300)
+plt.savefig("split_violins_orthologs_vs_swissprot_homologs.svg",
+            format="svg", bbox_inches="tight", dpi=300)
 plt.show()

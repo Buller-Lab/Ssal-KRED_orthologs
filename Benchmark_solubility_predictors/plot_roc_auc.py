@@ -16,7 +16,6 @@ PREDICTOR_COLS = [
     "Protein-sol",
     "pI",
     "SoluProt",
-    "NetSolP",
     "NetSolP (ESM1b distilled)",
     "NetSolP (ESM1b)",     
     "NetSolP (ESM12)",        
@@ -73,11 +72,11 @@ for auc, col, fpr, tpr, color in curves:
 
 plt.xlim([-0.02, 1.02])
 plt.ylim([-0.02, 1.02])
-plt.xlabel('False Positive Rate', fontsize=16, fontweight='bold')
-plt.ylabel('True Positive Rate', fontsize=16, fontweight='bold')
+plt.xlabel('False Positive Rate', fontsize=14, fontweight='bold')
+plt.ylabel('True Positive Rate', fontsize=14, fontweight='bold')
 plt.xticks(fontsize=14)
 plt.yticks(fontsize=14)
-plt.legend(loc='lower right', fontsize=14, framealpha=0.95)
+plt.legend(loc='lower right', fontsize=12, framealpha=0.95)
 plt.grid(True, alpha=0.25, linestyle=':')
 plt.tight_layout()
 plt.savefig("roc_curves_solubility.svg", bbox_inches='tight', dpi=300)

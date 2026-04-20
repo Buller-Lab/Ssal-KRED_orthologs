@@ -45,3 +45,15 @@ python get_homologs.py -i reference.fasta -o Ort-EZM-20_4_homologs -d /mnt/bkup/
 
 ##Identification of homologs of all orthologs in UniProt
 python get_homologs.py -i Ssal-KRED_ortholog_library_sequences.fasta -o UniProt_homologs -d /mnt/bkup/tools/UniProt
+
+## Lasso and multiple linear regression
+
+ python linear_regression.py -i full_data_table_experimental_and_homologic.csv -t "2b (R)"
+
+  python linear_regression.py -i full_data_table_experimental_and_homologic.csv -t "ee 2b (%)"
+
+## PCA on top 3 features
+
+python perform_clustering_2b_R.py full_data_table_experimental_and_homologic.csv   --features cavity_frequency_Polar_uncharged cavity_frequency_Aromatic tm_score   --color-col "2b (R)"
+
+python perform_clustering_2b_ee.py full_data_table_experimental_and_homologic.csv   --features bindingsite_similarity_score n_bindingsite_residues cavity_n_points   --color-col "ee 2b (%)"

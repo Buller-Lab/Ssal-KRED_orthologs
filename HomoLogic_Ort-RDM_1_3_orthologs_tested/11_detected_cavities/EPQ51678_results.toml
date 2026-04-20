@@ -1,0 +1,49 @@
+# pyKVFinder results
+
+[FILES]
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ort-RDM_1_3_homologs_tested/08_homolog_bindingsites_superposed/EPQ51678_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ort-RDM_1_3_homologs_tested/11_detected_cavities/EPQ51678_cavities.pdb"
+
+[PARAMETERS]
+STEP = 0.6
+
+[RESULTS.VOLUME]
+KAA = 658.37
+
+[RESULTS.AREA]
+KAA = 438.03
+
+[RESULTS.MAX_DEPTH]
+KAA = 6.03
+
+[RESULTS.AVG_DEPTH]
+KAA = 2.13
+
+[RESULTS.AVG_HYDROPATHY]
+KAA = -0.11
+EisenbergWeiss = [ -1.42, 2.6,]
+
+[RESULTS.RESIDUES]
+KAA = [ [ "26", "A", "THR",], [ "29", "A", "ASN",], [ "31", "A", "TYR",], [ "32", "A", "ILE",], [ "50", "A", "VAL",], [ "51", "A", "THR",], [ "52", "A", "ARG",], [ "56", "A", "LYS",], [ "78", "A", "VAL",], [ "81", "A", "ILE",], [ "87", "A", "TYR",], [ "100", "A", "VAL",], [ "101", "A", "ALA",], [ "102", "A", "SER",], [ "103", "A", "PRO",], [ "104", "A", "VAL",], [ "140", "A", "THR",], [ "142", "A", "SER",], [ "143", "A", "SER",], [ "144", "A", "VAL",], [ "184", "A", "TYR",], [ "185", "A", "TYR",], [ "188", "A", "LYS",], [ "213", "A", "PRO",], [ "214", "A", "ASN",], [ "215", "A", "VAL",], [ "216", "A", "ASN",], [ "229", "A", "ALA",], [ "230", "A", "THR",], [ "231", "A", "THR",], [ "234", "A", "TRP",], [ "252", "A", "GLN",],]
+
+[RESULTS.FREQUENCY.KAA.RESIDUES]
+ALA = 2
+ARG = 1
+ASN = 3
+GLN = 1
+ILE = 2
+LYS = 2
+PRO = 2
+SER = 3
+THR = 5
+TRP = 1
+TYR = 4
+VAL = 6
+
+[RESULTS.FREQUENCY.KAA.CLASS]
+R1 = 12
+R2 = 5
+R3 = 12
+R4 = 0
+R5 = 3
+RX = 0

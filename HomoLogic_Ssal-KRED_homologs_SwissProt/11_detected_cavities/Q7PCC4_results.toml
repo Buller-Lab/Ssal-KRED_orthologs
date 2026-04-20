@@ -1,47 +1,47 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/08_homolog_bindingsites_superposed/Q7PCC4_superposed_bindingsite_refined.pdb"
-OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/11_detected_cavities/Q7PCC4_cavities.pdb"
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/08_homolog_bindingsites_superposed/Q7PCC4_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/11_detected_cavities/Q7PCC4_cavities.pdb"
 
 [PARAMETERS]
 STEP = 0.6
 
 [RESULTS.VOLUME]
-KAA = 335.23
+KAA = 341.5
 
 [RESULTS.AREA]
-KAA = 214.68
+KAA = 216.07
 
 [RESULTS.MAX_DEPTH]
-KAA = 3.79
+KAA = 4.72
 
 [RESULTS.AVG_DEPTH]
-KAA = 1.26
+KAA = 1.34
 
 [RESULTS.AVG_HYDROPATHY]
-KAA = -0.35
+KAA = -0.38
 EisenbergWeiss = [ -1.42, 2.6,]
 
 [RESULTS.RESIDUES]
-KAA = [ [ "20", "A", "PHE",], [ "21", "A", "VAL",], [ "22", "A", "ALA",], [ "87", "A", "VAL",], [ "88", "A", "ALA",], [ "89", "A", "THR",], [ "91", "A", "VAL",], [ "93", "A", "PHE",], [ "129", "A", "THR",], [ "131", "A", "SER",], [ "132", "A", "ALA",], [ "133", "A", "ALA",], [ "168", "A", "TYR",], [ "172", "A", "LYS",], [ "195", "A", "PRO",], [ "197", "A", "LEU",], [ "198", "A", "MET",], [ "210", "A", "SER",], [ "231", "A", "MET",],]
+KAA = [ [ "20", "A", "PHE",], [ "21", "A", "VAL",], [ "22", "A", "ALA",], [ "87", "A", "VAL",], [ "89", "A", "THR",], [ "91", "A", "VAL",], [ "93", "A", "PHE",], [ "129", "A", "THR",], [ "131", "A", "SER",], [ "132", "A", "ALA",], [ "168", "A", "TYR",], [ "172", "A", "LYS",], [ "195", "A", "PRO",], [ "196", "A", "THR",], [ "197", "A", "LEU",], [ "198", "A", "MET",], [ "209", "A", "SER",], [ "210", "A", "SER",], [ "231", "A", "MET",],]
 
 [RESULTS.FREQUENCY.KAA.RESIDUES]
-ALA = 4
+ALA = 2
 LEU = 1
 LYS = 1
 MET = 2
 PHE = 2
 PRO = 1
-SER = 2
-THR = 2
+SER = 3
+THR = 3
 TYR = 1
 VAL = 3
 
 [RESULTS.FREQUENCY.KAA.CLASS]
-R1 = 9
+R1 = 7
 R2 = 3
-R3 = 6
+R3 = 8
 R4 = 0
 R5 = 1
 RX = 0

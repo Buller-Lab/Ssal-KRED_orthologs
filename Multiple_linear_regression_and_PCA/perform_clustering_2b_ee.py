@@ -1,40 +1,37 @@
 #!/usr/bin/env python3
 import argparse
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
 from sklearn.impute import SimpleImputer
 
-parser = argparse.ArgumentParser(description="PCA vs t-SNE colored by selected column – grey & faded for missing")
-parser.add_argument("csv_file", type=str, help="Path to the input CSV file")
-parser.add_argument("--color-col", "-c", type=str, default="ee 2b (%)", help="Column to color by (NaN → light grey, faded)")
-parser.add_argument("--perplexity", type=int, default=10)
-parser.add_argument("--learning-rate", type=str, default="auto")
+parser = argparse.ArgumentParser(description="PCA on selected features colored by target column")
+parser.add_argument("csv_file", type=str, help="Path to input CSV")
+parser.add_argument("--features", nargs="+", required=True,
+                    help="List of feature column names (space-separated)")
+parser.add_argument("--color-col", "-c", type=str, required=True,
+                    help="Column to color points by (NaN → faded grey)")
 parser.add_argument("--random-state", type=int, default=42)
 
 args = parser.parse_args()
 
-FEATURES = [
-    'bindingsite_similarity_score', 'cavity_n_points','n_bindingsite_residues'
-]
+OUT_FOLDER = "PCA_top3_features"
+os.makedirs(OUT_FOLDER, exist_ok=True)
 
 df = pd.read_csv(args.csv_file)
-available_features = [f for f in FEATURES if f in df.columns]
 
-if not available_features:
-    raise ValueError("No known numeric feature columns found in the CSV")
+missing_feats = [f for f in args.features if f not in df.columns]
+if missing_feats:
+    raise ValueError(f"Features not found in CSV: {missing_feats}")
 
-X = df[available_features].select_dtypes(include=[np.number]).copy()
+X_raw = df[args.features].select_dtypes(include=[np.number]).copy()
 
 imputer = SimpleImputer(strategy='median')
-X_imputed = pd.DataFrame(imputer.fit_transform(X), columns=X.columns, index=X.index)
-
-if 'e_value' in X_imputed.columns:
-    X_imputed['e_value'] = np.log1p(X_imputed['e_value'].clip(lower=0))
+X_imputed = pd.DataFrame(imputer.fit_transform(X_raw), columns=X_raw.columns, index=X_raw.index)
 
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X_imputed)
@@ -42,106 +39,95 @@ X_scaled = scaler.fit_transform(X_imputed)
 pca = PCA(n_components=2, random_state=args.random_state)
 X_pca = pca.fit_transform(X_scaled)
 
-tsne = TSNE(
-    n_components=2,
-    perplexity=args.perplexity,
-    learning_rate=args.learning_rate,
-    max_iter=1000,
-    random_state=args.random_state,
-    init='pca'
+evr = pca.explained_variance_ratio_
+cum_evr = np.cumsum(evr)
+
+n_samples = X_scaled.shape[0]
+print("\n" + "═" * 60)
+print(f"PCA on {len(args.features)} features → colored by: {args.color_col}")
+print(f"Number of samples: {n_samples}")
+print(f"Explained variance:")
+print(f"  PC1: {evr[0]:.3f}  ({evr[0]*100:.1f} %)")
+print(f"  PC2: {evr[1]:.3f}  ({evr[1]*100:.1f} %)")
+print(f"  Cumulative (PC1+PC2): {cum_evr[1]:.3f}  ({cum_evr[1]*100:.1f} %)")
+print("═" * 60)
+
+loadings = pd.DataFrame(
+    pca.components_.T,
+    columns=['PC1', 'PC2'],
+    index=args.features
 )
-X_tsne = tsne.fit_transform(X_scaled)
 
-color_col = args.color_col
+print("\nFeature loadings:")
+print(loadings.round(3))
 
-if color_col not in df.columns:
-    raise ValueError(f"Column '{color_col}' not found. Available: {list(df.columns)}")
+print("\nPC1 sorted by |loading| (strongest contributors):")
+pc1_sorted = loadings['PC1'].abs().sort_values(ascending=False)
+for feat, abs_load in pc1_sorted.items():
+    sign = "+" if loadings.loc[feat, 'PC1'] >= 0 else "−"
+    print(f"  {feat:35} {sign}{abs_load:.3f}")
 
-values = df[color_col]
+print("\nQuick interpretation:")
+if cum_evr[1] >= 0.80:
+    strength = "very strong"
+elif cum_evr[1] >= 0.65:
+    strength = "good"
+else:
+    strength = "moderate"
+print(f"→ The top-3 features capture {strength} amount of variance ({cum_evr[1]*100:.1f} % in 2D).")
+if evr[0] > 0.50:
+    print("  Separation mainly occurs along PC1.")
+print("  Strong gradient along PC1 suggests these descriptors carry most of the signal for the colored property.")
+print("═" * 60 + "\n")
 
-mask_missing = values.isna()
+color_values = df[args.color_col]
+mask_missing = color_values.isna()
 mask_valid   = ~mask_missing
 
-valid_values = values[mask_valid]
+valid_values = color_values[mask_valid]
 if len(valid_values) > 0:
-    vmin = valid_values.min()
-    vmax = valid_values.max()
+    vmin, vmax = valid_values.min(), valid_values.max()
     norm = mcolors.Normalize(vmin=vmin, vmax=vmax)
 else:
     norm = mcolors.Normalize(vmin=0, vmax=1)
 
-from matplotlib.colors import LinearSegmentedColormap
-
-cmap = LinearSegmentedColormap.from_list(
+cmap = mcolors.LinearSegmentedColormap.from_list(
     "purple_white_green",
     ["#885A95", "#ffffff", "#76b689"]
 )
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6.5))
+fig, ax = plt.subplots(figsize=(7, 7), dpi=100)
 
-ax1.scatter(
+ax.scatter(
     X_pca[mask_missing, 0], X_pca[mask_missing, 1],
-    c='lightgrey',         
-    s=70,
-    edgecolor='none',       
-    linewidth=0.4,
-    alpha=0.20,            
-    zorder=1
+    c='lightgrey', s=60, edgecolor='none', alpha=0.5, zorder=1
 )
 
-ax1.scatter(
+sc = ax.scatter(
     X_pca[mask_valid, 0], X_pca[mask_valid, 1],
-    c=valid_values,
-    cmap=cmap,
-    norm=norm,
-    s=70,
-    edgecolor='black',
-    linewidth=0.6,
-    alpha=1.0,
-    zorder=2              
+    c=valid_values, cmap=cmap, norm=norm,
+    s=80, edgecolor='black', linewidth=0.6, alpha=1.0, zorder=2
 )
 
-ax1.set_title(f"PCA\nExplained variance: {sum(pca.explained_variance_ratio_):.1%}")
-ax1.set_xlabel("PC1")
-ax1.set_ylabel("PC2")
-ax1.grid(True, alpha=0.3)
+ax.set_xlabel(f"PC1 ({evr[0]*100:.1f} % variance)", fontsize=14)
+ax.set_ylabel(f"PC2 ({evr[1]*100:.1f} % variance)", fontsize=14)
 
-ax2.scatter(
-    X_tsne[mask_missing, 0], X_tsne[mask_missing, 1],
-    c='lightgrey',
-    s=70,
-    edgecolor='none',
-    linewidth=0.4,
-    alpha=0.20,
-    zorder=1
-)
+LIM = 5.0
+ax.set_xlim(-LIM, LIM)
+ax.set_ylim(-LIM, LIM)
 
-ax2.scatter(
-    X_tsne[mask_valid, 0], X_tsne[mask_valid, 1],
-    c=valid_values,
-    cmap=cmap,
-    norm=norm,
-    s=70,
-    edgecolor='black',
-    linewidth=0.6,
-    alpha=1.0,
-    zorder=2
-)
+ax.grid(True, linestyle='--', alpha=0.3)
+ax.set_aspect('equal')
 
-ax2.set_title(f"t-SNE\nperplexity = {args.perplexity}")
-ax2.set_xlabel("t-SNE 1")
-ax2.set_ylabel("t-SNE 2")
-ax2.grid(True, alpha=0.3)
+cbar = fig.colorbar(sc, ax=ax, fraction=0.046, pad=0.04)
+cbar.set_label(f"{args.color_col}", fontsize=14)
 
-cbar_ax = fig.add_axes([0.88, 0.15, 0.015, 0.7])
-cbar = fig.colorbar(
-    plt.cm.ScalarMappable(norm=norm, cmap=cmap),
-    cax=cbar_ax, orientation='vertical'
-)
-cbar.set_label(f"{color_col} value", fontsize=11)
+plt.tight_layout()
 
-plt.subplots_adjust(right=0.82)
-
-plt.savefig("clustering.png", dpi=300, bbox_inches='tight')
-plt.savefig("clustering.svg", bbox_inches='tight')
+safe_col = args.color_col.replace(" ", "_").replace("%", "pct").replace("(", "").replace(")", "")
+fname_base = f"pca_top3_{safe_col}"
+plt.savefig(os.path.join(OUT_FOLDER, f"{fname_base}.png"), dpi=300, bbox_inches='tight')
+plt.savefig(os.path.join(OUT_FOLDER, f"{fname_base}.svg"), bbox_inches='tight')
 plt.close(fig)
+
+print(f"Plot saved to: {OUT_FOLDER}/{fname_base}.png  (and .svg)")

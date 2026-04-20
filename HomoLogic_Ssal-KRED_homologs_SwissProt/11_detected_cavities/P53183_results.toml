@@ -1,31 +1,31 @@
 # pyKVFinder results
 
 [FILES]
-INPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/08_homolog_bindingsites_superposed/P53183_superposed_bindingsite_refined.pdb"
-OUTPUT = "/mnt/bkup/peter_ccfour/Documents/KRED_Niklaus/00_mmseqs2_database/KP104_homologs_SwissProt/11_detected_cavities/P53183_cavities.pdb"
+INPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/08_homolog_bindingsites_superposed/P53183_superposed_bindingsite_refined.pdb"
+OUTPUT = "/mnt/bkup/Ssal-KRED_orthologs/HomoLogic_Ssal-KRED_homologs_SwissProt/11_detected_cavities/P53183_cavities.pdb"
 
 [PARAMETERS]
 STEP = 0.6
 
 [RESULTS.VOLUME]
-KAA = 139.1
-KAB = 327.46
+KAA = 142.13
+KAB = 314.28
 
 [RESULTS.AREA]
-KAA = 119.17
-KAB = 248.72
+KAA = 118.47
+KAB = 237.37
 
 [RESULTS.MAX_DEPTH]
-KAA = 2.16
-KAB = 4.49
+KAA = 2.4
+KAB = 3.89
 
 [RESULTS.AVG_DEPTH]
 KAA = 0.75
-KAB = 1.41
+KAB = 1.28
 
 [RESULTS.AVG_HYDROPATHY]
-KAA = 0.21
-KAB = -0.46
+KAA = 0.33
+KAB = -0.49
 EisenbergWeiss = [ -1.42, 2.6,]
 
 [RESULTS.RESIDUES]
