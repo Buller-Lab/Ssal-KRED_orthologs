@@ -1,8 +1,8 @@
-##Repository accompanying the publication:**
+##Repository accompanying the publication:
 #"Iterative and data-driven ortholog mining enables reliable discovery of stereoselective ketoreductases"
 
-# [![Python](https://img.shields.io/badge/python-3.14%2B-blue.svg)](https://www.python.org/)
-# [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/python-3.14%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Ketoreductases (KREDs) enable the stereoselective synthesis of chiral alcohols and are widely used in pharmaceutical manufacturing. However, reliably identifying enzymes with high activity and selectivity toward non-nativesubstrates remains challenging and often requires extensive empirical screening.
 
