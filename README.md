@@ -46,7 +46,7 @@ This repository contains description data and code to provide figures, tables an
    conda activate homologic
    ```
 
-**Typical install time** on a normal desktop computer: **10–20 minutes** (Python packages and one environment).
+**Typical install time** on a normal ubuntu machine : **1-3 minutes each** (Python packages and one environment).
 
 For **HomoLogic** installation instructions, visit [https://github.com/Buller-Lab/HomoLogic](https://github.com/Buller-Lab/HomoLogic).
 
@@ -56,14 +56,6 @@ For **HomoLogic** installation instructions, visit [https://github.com/Buller-La
 Use the concrete commands listed in the Repository Structure section above to reproduce each analysis.
 
 After generating candidate sequences, export them and process with the **HomoLogic** repository for full descriptor calculation and predictive modeling.
-
-## Reproducing Results
-
-To reproduce the full set of results from the manuscript, run the commands in the order shown in the "Repository Structure & Methods Mapping" section using the appropriate conda environments.
-
-**Expected reproduction time** on a normal desktop (32 GB RAM):
-- OrthoFinder + MMseqs2: several hours
-- Remaining steps (alignments, heatmaps, statistics, LASSO): **~60–180 minutes**
 
 ## Data Availability
 
