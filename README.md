@@ -4,25 +4,13 @@
 [![Python](https://img.shields.io/badge/python-3.14%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Ketoreductases (KREDs) enable the stereoselective synthesis of chiral alcohols and are widely used in pharmaceutical manufacturing. However, reliably identifying enzymes with high activity and selectivity toward non-nativesubstrates remains challenging and often requires extensive empirical screening.
+Ketoreductases (KREDs) enable the stereoselective synthesis of chiral alcohols and are widely used in pharmaceutical manufacturing. However, reliably identifying enzymes with high activity and selectivity toward non-native substrates remains challenging and often requires extensive empirical screening.
 
 This repository contains all code, scripts, data, and analysis results for the iterative ortholog mining workflow, phylogenetic analyses, screening visualizations, statistical evaluations, and data-driven modeling presented inthe study.
 
 **HomoLogic** — the fully automated computational pipeline for functional homology quantification — is available in a separate repository:  
 → **[HomoLogic](https://github.com/Buller-Lab/HomoLogic)**
 
-## Overview
-
-The study introduces an iterative, evolutionarily balanced ortholog mining strategy combined with data-driven modeling using HomoLogic:
-
-- Random sampling of 48 distant orthologs from the seed KRED (*Ssal*-KRED) identified five promising variants (de/ee between 42.8% and >99%).
-- Refined sampling of 60 orthologs in close phylogenetic proximity yielded ten superior ketoreductases (de/ee between 98% and >99%).
-- MMseqs2-based homology search expanded the sequence space, and HomoLogic increased the searchable functional space ~15-fold.
-- Interpretable models trained on HomoLogic-derived descriptors reliably predicted activity and stereoselectivity.
-
-## Repository Structure & Methods Mapping
-
-# Ssal-KRED_orthologs
 # Full Experimental & Computational Datasets
 only experimental.csv
 full data.csv
