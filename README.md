@@ -179,6 +179,7 @@ python get_homologs.py -i Ssal-KRED_ortholog_library_sequences.fasta -o UniProt_
 cd ..
 ```
 Expected output: see output folders and csv files
+
 ## Lasso and multiple linear regression & PCA on top 3 features
 Data: Multiple_linear_regression_and_PCA/full_data_table_experimental_and_homologic.csv
 ```bash
@@ -189,6 +190,30 @@ python linear_regression.py -i full_data_table_experimental_and_homologic.csv -t
 python linear_regression.py -i full_data_table_experimental_and_homologic.csv -t "ee 2b (%)"
 python perform_clustering_2b_R.py full_data_table_experimental_and_homologic.csv --features cavity_frequency_Polar_uncharged cavity_frequency_Aromatic tm_score --color-col "2b (R)"
 python perform_clustering_2b_ee.py full_data_table_experimental_and_homologic.csv --features bindingsite_similarity_score n_bindingsite_residues cavity_n_points --color-col "ee 2b (%)"
+cd ..
+```
+Expected output: see output folders
+
+## Analysis of generalization capabilities (exploiting mmseqs2 easy-cluster)
+Data: Regressor_generalization_capacity/full_data_table_experimental_and_homologic.csv
+```bash
+conda env create -f homologic.yml     # if not already done
+conda activate homologic
+cd Regressor_generalization_capacity
+python analyze_generalization_2b_R.py -i full_data_table_experimental_and_homologic.csv 
+python analyze_generalization_2b_ee.py -i full_data_table_experimental_and_homologic.csv 
+cd ..
+```
+Expected output: see output folders
+
+## Investigation of factors contributing to stability
+Data: Multiple_linear_regressionCorrelation_analysis_stability_factors/full_data_table_experimental_and_homologic.csv
+```bash
+conda env create -f homologic.yml     # if not already done
+conda activate homologic
+cd Regressor_generalization_capacity
+python calculate_stability_descriptors.py ../HomoLogic_Ssal-KRED_orthologs_tested/04_structure_models stability_features.csv 
+python analyze_correlations_with_melting_temperatures.py full_data_table_experimental_and_homologic.csv stability_features.csv
 cd ..
 ```
 Expected output: see output folders
