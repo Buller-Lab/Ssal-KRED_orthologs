@@ -3,6 +3,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.14%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://zenodo.org/badge/1142494427.svg)](https://doi.org/10.5281/zenodo.20756197)
 
 Ketoreductases (KREDs) enable the stereoselective synthesis of chiral alcohols and are widely used in pharmaceutical manufacturing. However, reliably identifying enzymes with high activity and selectivity toward non-native substrates remains challenging and often requires extensive empirical screening.
 
