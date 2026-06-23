@@ -92,6 +92,11 @@ conda env create -f plots.yml     # if not already done
 conda activate plots
 cd Swarm_plots_round1_vs_round2
 python script.py <csv_file> <main_column> <second_column> # script and columns need to be customized based on product formation to visualize
+
+# Example
+# python plot_histograms_1b.py round_1_vs_round_2.csv melting_temperature 1b
+# python plot_histograms_3b.py round_1_vs_round_2.csv "ee 3b (%)" "3b (R)"
+
 cd ..
 ```
 
@@ -151,7 +156,8 @@ Data: Ssal-KRED_orthologs/Splitted_histogram_soluble_unsoluble/soluble_expressio
 conda env create -f plots.yml     # if not already done
 conda activate plots
 cd Splitted_histogram_soluble_unsoluble
-python seqid_tm_histogram.py -i soluble_expression_orthologs.csv
+python plot_seqid_tm_histogram.py -i soluble_expression_orthologs.csv
+
 cd ..
 ```
 
