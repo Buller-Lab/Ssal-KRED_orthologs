@@ -187,7 +187,22 @@ cd ..
 ```
 Expected output: see output folders and csv files
 
+## Plots for correlation analysis
+Input data:  full_data_table_experimental_and_homologic.csv
+
+```bash
+conda env create -f plots.yml     # if not already done
+conda activate plots
+cd Correlation_analysis_HomoLogic_Ort-RDM_1_3    # or cd Correlation_analysis_HomoLogic_Ort-RDM_1_3
+python correlation_matrix.py full_data_table_experimental_and_homologic.csv
+python correlation_matrix_2b_only.py full_data_table_experimental_and_homologic.csv
+cd ..
+```
+Expected output: see output folders and csv files
+
 ## Lasso and multiple linear regression & PCA on top 3 features
+
+
 Data: Multiple_linear_regression_and_PCA/full_data_table_experimental_and_homologic.csv
 ```bash
 conda env create -f statistics.yml     # if not already done
