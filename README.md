@@ -92,6 +92,11 @@ conda env create -f plots.yml     # if not already done
 conda activate plots
 cd Swarm_plots_round1_vs_round2
 python script.py <csv_file> <main_column> <second_column> # script and columns need to be customized based on product formation to visualize
+
+# Example
+# python plot_histograms_1b.py round_1_vs_round_2.csv melting_temperature 1b
+# python plot_histograms_3b.py round_1_vs_round_2.csv "ee 3b (%)" "3b (R)"
+
 cd ..
 ```
 
@@ -151,7 +156,8 @@ Data: Ssal-KRED_orthologs/Splitted_histogram_soluble_unsoluble/soluble_expressio
 conda env create -f plots.yml     # if not already done
 conda activate plots
 cd Splitted_histogram_soluble_unsoluble
-python seqid_tm_histogram.py -i soluble_expression_orthologs.csv
+python plot_seqid_tm_histogram.py -i soluble_expression_orthologs.csv
+
 cd ..
 ```
 
@@ -181,7 +187,22 @@ cd ..
 ```
 Expected output: see output folders and csv files
 
+## Plots for correlation analysis
+Input data:  full_data_table_experimental_and_homologic.csv
+
+```bash
+conda env create -f plots.yml     # if not already done
+conda activate plots
+cd Correlation_analysis_HomoLogic_Ort-RDM_1_3    # or cd Correlation_analysis_HomoLogic_Ort-RDM_1_3
+python correlation_matrix.py full_data_table_experimental_and_homologic.csv
+python correlation_matrix_2b_only.py full_data_table_experimental_and_homologic.csv
+cd ..
+```
+Expected output: see output folders and csv files
+
 ## Lasso and multiple linear regression & PCA on top 3 features
+
+
 Data: Multiple_linear_regression_and_PCA/full_data_table_experimental_and_homologic.csv
 ```bash
 conda env create -f statistics.yml     # if not already done
