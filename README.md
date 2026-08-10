@@ -251,4 +251,7 @@ If you use this code, data, or workflows, please cite:
 (DOI specified after publication)
 
 For the `get_homologs.py` script, please cite:
+
+https://doi.org/10.1016/j.cbpa.2026.102697
+
 https://pubs.acs.org/doi/full/10.1021/acscatal.4c04474
