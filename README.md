@@ -249,8 +249,8 @@ This project is licensed under the MIT License – see file for details.
 ## Citation
 
 If you use this code, data, or workflows, please cite:
-> "Iterative and data-driven ortholog mining enables reliable discovery of stereoselective ketoreductases"  
-(DOI specified after publication)
+Stockinger, Peter, et al. "Iterative and data-driven ortholog mining enables reliable discovery of stereoselective ketoreductases." Nature Communications (2026).
+https://www.nature.com/articles/s41467-026-77715-6
 
 For the `get_homologs.py` script, please cite:
 
